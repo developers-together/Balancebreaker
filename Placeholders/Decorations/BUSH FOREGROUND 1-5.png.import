@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5qa1ghbyhetf"
-path="res://.godot/imported/placeholder16.png-be8ba4ddfe8c8f421c7b744ee895c7a1.ctex"
+uid="uid://b0m1fpd3dheyb"
+path="res://.godot/imported/BUSH FOREGROUND 1-5.png-0a4ae6499a59c7ea68df12bb60a21902.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Placeholders/placeholder16.png"
-dest_files=["res://.godot/imported/placeholder16.png-be8ba4ddfe8c8f421c7b744ee895c7a1.ctex"]
+source_file="res://Placeholders/Decorations/BUSH FOREGROUND 1-5.png"
+dest_files=["res://.godot/imported/BUSH FOREGROUND 1-5.png-0a4ae6499a59c7ea68df12bb60a21902.ctex"]
 
 [params]
 

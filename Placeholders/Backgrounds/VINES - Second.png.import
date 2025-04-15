@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5qa1ghbyhetf"
-path="res://.godot/imported/placeholder16.png-be8ba4ddfe8c8f421c7b744ee895c7a1.ctex"
+uid="uid://uw0fatqvngj5"
+path="res://.godot/imported/VINES - Second.png-8424cf91cd45b6dd0fbe3187d60217c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Placeholders/placeholder16.png"
-dest_files=["res://.godot/imported/placeholder16.png-be8ba4ddfe8c8f421c7b744ee895c7a1.ctex"]
+source_file="res://Placeholders/Backgrounds/VINES - Second.png"
+dest_files=["res://.godot/imported/VINES - Second.png-8424cf91cd45b6dd0fbe3187d60217c0.ctex"]
 
 [params]
 

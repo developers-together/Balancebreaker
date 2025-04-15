@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5qa1ghbyhetf"
-path="res://.godot/imported/placeholder16.png-be8ba4ddfe8c8f421c7b744ee895c7a1.ctex"
+uid="uid://bu70278mcwa3v"
+path="res://.godot/imported/WOODS - Fourth.png-4a2169bc925141ef670c84e07c511073.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Placeholders/placeholder16.png"
-dest_files=["res://.godot/imported/placeholder16.png-be8ba4ddfe8c8f421c7b744ee895c7a1.ctex"]
+source_file="res://Placeholders/Backgrounds/WOODS - Fourth.png"
+dest_files=["res://.godot/imported/WOODS - Fourth.png-4a2169bc925141ef670c84e07c511073.ctex"]
 
 [params]
 
