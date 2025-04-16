@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://c53u2giqh72dm"]
+
+[ext_resource type="Script" uid="uid://cbh45agau84px" path="res://Scripts/CharacterSelection.gd" id="1_ejqe8"]
+
+[node name="CharacterSelection" type="Node2D"]
+script = ExtResource("1_ejqe8")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 330.0
+offset_top = 121.0
+offset_right = 370.0
+offset_bottom = 144.0
+text = "RX-42"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 533.0
+offset_top = 145.0
+offset_right = 573.0
+offset_bottom = 168.0
+text = "VX-09"
+
+[node name="RX42" type="TextureButton" parent="."]
+offset_left = 332.0
+offset_top = 118.0
+offset_right = 372.0
+offset_bottom = 158.0
+
+[node name="VX09" type="TextureButton" parent="."]
+offset_left = 537.0
+offset_top = 134.0
+offset_right = 577.0
+offset_bottom = 174.0
+
+[connection signal="pressed" from="RX42" to="." method="_on_rx_42_pressed"]
+[connection signal="pressed" from="VX09" to="." method="_on_vx_09_pressed"]
