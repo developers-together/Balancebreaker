@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Balancebreaker"
+run/main_scene="uid://d3ffqgx2d2run"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
