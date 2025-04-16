@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cupmmkdiphveg"]
+[gd_scene load_steps=7 format=3 uid="uid://cupmmkdiphveg"]
 
 [ext_resource type="PackedScene" uid="uid://dcabsg7cu7ajn" path="res://Scenes/Player.tscn" id="1_x3f8w"]
 [ext_resource type="Texture2D" uid="uid://hp36w64pu8nu" path="res://Placeholders/Silly_Placeholders.png" id="2_5irjb"]
+[ext_resource type="PackedScene" uid="uid://deb06e124yr2t" path="res://Scenes/Electromagnetic_Weapon.tscn" id="3_5irjb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b1ef1"]
 atlas = ExtResource("2_5irjb")
@@ -30,3 +31,5 @@ animation = &"RX42"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 shape = SubResource("CapsuleShape2D_l5udq")
+
+[node name="ElectromagneticWeapon" parent="." index="3" instance=ExtResource("3_5irjb")]

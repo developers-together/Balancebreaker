@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://4oxnwrkc7jox"]
+[gd_scene load_steps=7 format=3 uid="uid://4oxnwrkc7jox"]
 
 [ext_resource type="PackedScene" uid="uid://dcabsg7cu7ajn" path="res://Scenes/Player.tscn" id="1_w0r1a"]
 [ext_resource type="Texture2D" uid="uid://hp36w64pu8nu" path="res://Placeholders/Silly_Placeholders.png" id="2_b5et4"]
+[ext_resource type="PackedScene" uid="uid://cuxvamtqc2ogr" path="res://Scenes/Ballistic_Weapon.tscn" id="3_b5et4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1y2xo"]
 atlas = ExtResource("2_b5et4")
@@ -30,3 +31,5 @@ animation = &"VX09"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 shape = SubResource("CapsuleShape2D_hsk3v")
+
+[node name="BallisticWeapon" parent="." index="3" instance=ExtResource("3_b5et4")]
