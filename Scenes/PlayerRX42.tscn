@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://cupmmkdiphveg"]
+
+[ext_resource type="PackedScene" uid="uid://dcabsg7cu7ajn" path="res://Scenes/Player.tscn" id="1_x3f8w"]
+[ext_resource type="Texture2D" uid="uid://hp36w64pu8nu" path="res://Placeholders/Silly_Placeholders.png" id="2_5irjb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1ef1"]
+atlas = ExtResource("2_5irjb")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0xwi6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1ef1")
+}],
+"loop": true,
+"name": &"RX42",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l5udq"]
+radius = 4.0
+height = 14.0
+
+[node name="PlayerRX42" instance=ExtResource("1_x3f8w")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_0xwi6")
+animation = &"RX42"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+shape = SubResource("CapsuleShape2D_l5udq")

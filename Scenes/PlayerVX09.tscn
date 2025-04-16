@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://4oxnwrkc7jox"]
+
+[ext_resource type="PackedScene" uid="uid://dcabsg7cu7ajn" path="res://Scenes/Player.tscn" id="1_w0r1a"]
+[ext_resource type="Texture2D" uid="uid://hp36w64pu8nu" path="res://Placeholders/Silly_Placeholders.png" id="2_b5et4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1y2xo"]
+atlas = ExtResource("2_b5et4")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qu04j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1y2xo")
+}],
+"loop": true,
+"name": &"VX09",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hsk3v"]
+radius = 4.0
+height = 14.0
+
+[node name="PlayerVX09" instance=ExtResource("1_w0r1a")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_qu04j")
+animation = &"VX09"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+shape = SubResource("CapsuleShape2D_hsk3v")
