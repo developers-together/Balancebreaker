@@ -6,10 +6,26 @@ extends CharacterBody2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+@onready var weapon_socket: Node2D = $WeaponSocket
+
+const OFFSET = 16
+
 func GetInput():
 	
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
+	
+	if input_direction.x == -1:
+		
+		animated_sprite_2d.flip_h= true
+		
+		weapon_socket.position.x = -1 * OFFSET
+		
+	if input_direction.x == 1:
+		
+		animated_sprite_2d.flip_h= false
+		
+		weapon_socket.position.x = OFFSET - 8
 	
 func _physics_process(_delta):
 	
