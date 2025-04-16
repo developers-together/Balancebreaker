@@ -19,13 +19,13 @@ func GetInput():
 		
 		animated_sprite_2d.flip_h= true
 		
-		weapon_socket.position.x = -1 * OFFSET
+		weapon_socket.position.x = -1 * (OFFSET + 8)
 		
 	if input_direction.x == 1:
 		
 		animated_sprite_2d.flip_h= false
 		
-		weapon_socket.position.x = OFFSET - 8
+		weapon_socket.position.x = OFFSET - 10
 	
 func _physics_process(_delta):
 	
