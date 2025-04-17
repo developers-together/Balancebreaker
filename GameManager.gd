@@ -6,7 +6,7 @@ extends Node
 
 @onready var player_vx_09: CharacterBody2D = $"../PlayerVX09"
 
-
+@onready var Bullet = preload('res://Scenes/Bullets.tscn')
 
 var selected_character: PackedScene = null
 

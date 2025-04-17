@@ -1,35 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://d3ffqgx2d2run"]
+[gd_scene load_steps=7 format=4 uid="uid://d3ffqgx2d2run"]
 
 [ext_resource type="Script" uid="uid://cugbwvs4stbog" path="res://GameManager.gd" id="1_u44n3"]
 [ext_resource type="Texture2D" uid="uid://d22v12q4g7gjb" path="res://Placeholders/GRASS+.png" id="1_xkndl"]
 [ext_resource type="PackedScene" uid="uid://4oxnwrkc7jox" path="res://Scenes/PlayerVX09.tscn" id="4_t88pq"]
 [ext_resource type="PackedScene" uid="uid://cupmmkdiphveg" path="res://Scenes/PlayerRX42.tscn" id="5_r0x5m"]
-
-[sub_resource type="GDScript" id="GDScript_sb48q"]
-script/source = "extends Node2D
-
-#@onready var player_rx_42: CharacterBody2D = $PlayerRX42
-#
-#@onready var player_vx_09: CharacterBody2D = $\"../PlayerVX09\"
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
-	#var PlayerCharacterPath = GameData.PlayerPath
-	#
-	#var PlayerNode = load(PlayerCharacterPath).instantiate()
-	#
-	#add_child(PlayerNode)
-	
-		#if GameData.PlayerPath == \"res://Scenes/PlayerRX42.tscn\":
-			#player_vx_09.queue_free()
-		#elif GameData.PlayerPath == \"res://Scenes/PlayerVX09.tscn\":
-			#player_rx_42.queue_free()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-	
-"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkndl"]
 texture = ExtResource("1_xkndl")
@@ -383,7 +357,6 @@ texture = ExtResource("1_xkndl")
 sources/0 = SubResource("TileSetAtlasSource_xkndl")
 
 [node name="Game" type="Node2D"]
-script = SubResource("GDScript_sb48q")
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true

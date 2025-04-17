@@ -1,7 +1,24 @@
 [gd_scene load_steps=18 format=3 uid="uid://cn8c1tbsrew1"]
 
 [ext_resource type="Texture2D" uid="uid://bd80bu7bsml4n" path="res://Placeholders/placeholder8.png" id="1_m5ws0"]
-[ext_resource type="Script" uid="uid://bj28httbungnl" path="res://Scripts/Weapon.gd" id="1_sw2lr"]
+
+[sub_resource type="GDScript" id="GDScript_m5ws0"]
+script/source = "extends Node2D
+
+@export var Damage = 10
+
+@export var FireRate = 0.1
+
+
+
+#func _physics_process(delta):
+	#look_at(get_global_mouse_position())
+	
+#func _process(_delta: float) -> void:
+	#if Input.is_action_pressed(\"fire\"):
+		#var Bullet = Bullets.instantiate()
+		#add_child(Bullet)
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sw2lr"]
 atlas = ExtResource("1_m5ws0")
@@ -110,9 +127,7 @@ animations = [{
 }]
 
 [node name="Weapon" type="Node2D"]
-script = ExtResource("1_sw2lr")
+script = SubResource("GDScript_m5ws0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_uqqos")
-
-[connection signal="shoot" from="." to="." method="_on_shoot"]

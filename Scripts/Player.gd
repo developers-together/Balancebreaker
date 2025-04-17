@@ -10,6 +10,10 @@ extends CharacterBody2D
 
 const OFFSET = 16
 
+#signal shoot(bullet, direction, location)
+
+var Bullet = preload('res://Scenes/Bullets.tscn')
+
 func GetInput():
 	
 	var input_direction = Input.get_vector("left", "right", "up", "down")
@@ -42,6 +46,25 @@ func _physics_process(_delta):
 #func _ready() -> void:
 	#
 		#game_manager.UseVX09()
-	
 
-	
+#func _process(_delta: float) -> void:
+	#weapon_socket.look_at(get_global_mouse_position())
+	#if Input.is_action_pressed("fire"):
+		#var Bullets = Bullet.instantiate()
+		#weapon_socket.add_child(Bullets)
+
+func _process(_delta: float) -> void:
+	weapon_socket.look_at(get_global_mouse_position())
+
+	if Input.is_action_pressed("fire"):
+		var bullet_instance = Bullet.instantiate()
+		bullet_instance.global_position = weapon_socket.global_position
+		var direction = (get_global_mouse_position() - weapon_socket.global_position).normalized()
+		bullet_instance.velocity = direction * 600
+		#weapon_socket.add_child(bullet_instance)
+		get_tree().current_scene.add_child(bullet_instance)
+
+#func _input(event):
+	#if event is InputEventMouseButton:
+		#if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			#shoot.emit(Bullet, weapon_socket.rotation, weapon_socket.position)

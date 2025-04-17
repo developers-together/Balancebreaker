@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcabsg7cu7ajn"]
+[gd_scene load_steps=3 format=3 uid="uid://dcabsg7cu7ajn"]
 
 [ext_resource type="Script" uid="uid://doasnjtfwnd56" path="res://Scripts/Player.gd" id="1_kyqiw"]
+[ext_resource type="PackedScene" uid="uid://bxc40d5yytxk3" path="res://Scenes/Bullets.tscn" id="3_gntrk"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_kyqiw")
@@ -12,3 +13,6 @@ position_smoothing_enabled = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 
 [node name="WeaponSocket" type="Node2D" parent="."]
+
+[node name="Bullets" parent="." instance=ExtResource("3_gntrk")]
+visible = false
