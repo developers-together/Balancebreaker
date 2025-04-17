@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dka6ru03kru0v"]
+
+[ext_resource type="Texture2D" uid="uid://urqmxrba70cl" path="res://Placeholders/placeholder32.png" id="1_yde48"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wsjr"]
+atlas = ExtResource("1_yde48")
+region = Rect2(0, 0, 69, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mei5x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wsjr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="WeaponSocket" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(17, 1)
+scale = Vector2(0.615942, 0.5625)
+sprite_frames = SubResource("SpriteFrames_mei5x")

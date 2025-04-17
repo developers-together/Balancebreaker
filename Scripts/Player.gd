@@ -30,6 +30,13 @@ func GetInput():
 		animated_sprite_2d.flip_h= false
 		
 		weapon_socket.position.x = OFFSET - 10
+		
+func _ready() -> void:
+	
+	if GameData.Player=="RX42":
+		animated_sprite_2d.play("RX42")
+	elif GameData.Player=="VX09":
+		animated_sprite_2d.play("VX09")
 	
 func _physics_process(_delta):
 	
