@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=4 uid="uid://p4qccnt5qxbs"]
+[gd_scene load_steps=10 format=4 uid="uid://p4qccnt5qxbs"]
 
-[ext_resource type="Script" uid="uid://dtln1wlbkmv6h" path="res://Scenes/Rooms/start_room.gd" id="1_4ppyl"]
 [ext_resource type="Texture2D" uid="uid://d22v12q4g7gjb" path="res://Placeholders/GRASS+.png" id="1_v84b1"]
 [ext_resource type="Texture2D" uid="uid://bk182yui5nd3h" path="res://Placeholders/Tiles/Tilesheet - WOODS.png" id="2_4ppyl"]
 [ext_resource type="PackedScene" uid="uid://dcabsg7cu7ajn" path="res://Scenes/Player.tscn" id="3_esdg8"]
 [ext_resource type="Script" uid="uid://cugbwvs4stbog" path="res://GameManager.gd" id="5_esdg8"]
+
+[sub_resource type="GDScript" id="GDScript_4ppyl"]
+script/source = "extends Node2D
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4etqo"]
 texture = ExtResource("1_v84b1")
@@ -702,8 +705,10 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4etqo")
 sources/1 = SubResource("TileSetAtlasSource_dp7gx")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_esdg8"]
+
 [node name="StartRoom" type="Node2D"]
-script = ExtResource("1_4ppyl")
+script = SubResource("GDScript_4ppyl")
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("5_esdg8")
@@ -715,3 +720,7 @@ tile_set = SubResource("TileSet_ngwsm")
 [node name="Player" parent="." instance=ExtResource("3_esdg8")]
 position = Vector2(320, 192)
 scale = Vector2(2, 2)
+radius = 7.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_esdg8")
