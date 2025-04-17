@@ -56,11 +56,12 @@ func _physics_process(_delta):
 func _process(_delta: float) -> void:
 	weapon_socket.look_at(get_global_mouse_position())
 
-	if Input.is_action_pressed("fire"):
+	if Input.is_action_just_pressed("fire"):
 		var bullet_instance = Bullet.instantiate()
 		bullet_instance.global_position = weapon_socket.global_position
 		var direction = (get_global_mouse_position() - weapon_socket.global_position).normalized()
 		bullet_instance.velocity = direction * 600
+		bullet_instance.rotation = direction.angle()
 		#weapon_socket.add_child(bullet_instance)
 		get_tree().current_scene.add_child(bullet_instance)
 
