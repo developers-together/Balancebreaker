@@ -8,6 +8,8 @@ extends CharacterBody2D
 
 @onready var weapon_socket: Node2D = $WeaponSocket
 
+@export var radius: float = 10  # Distance from player to weapon
+
 const OFFSET = 16
 
 #signal shoot(bullet, direction, location)
@@ -23,7 +25,7 @@ func GetInput():
 		
 		animated_sprite_2d.flip_h= true
 		
-		weapon_socket.position.x = -1 * (OFFSET + 8)
+		weapon_socket.position.x = -1 * (OFFSET)
 		
 	if input_direction.x == 1:
 		
@@ -61,8 +63,12 @@ func _physics_process(_delta):
 		#weapon_socket.add_child(Bullets)
 
 func _process(_delta: float) -> void:
+	var mouse_pos = get_global_mouse_position()
+	var mouseDirection = (mouse_pos - global_position).normalized()
+	var weapon_pos = mouseDirection * radius
 	weapon_socket.look_at(get_global_mouse_position())
-
+	weapon_socket.rotation = mouseDirection.angle()
+	weapon_socket.position = weapon_pos
 	if Input.is_action_just_pressed("fire"):
 		var bullet_instance = Bullet.instantiate()
 		bullet_instance.global_position = weapon_socket.global_position

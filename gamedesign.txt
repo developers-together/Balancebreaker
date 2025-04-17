@@ -31,9 +31,9 @@ the weapon mechanics works as the following:-
 Ranged:-
 
 
-    the first weapon is a ranged one with 2 modifiers one for the type of weapon either ballistic or electromagnatic and the behavior  such as shotgun, rifle, pistol,sniper,rocket launcher and it can be others
+	the first weapon is a ranged one with 2 modifiers one for the type of weapon either ballistic or electromagnatic and the behavior  such as shotgun, rifle, pistol,sniper,rocket launcher and it can be others
 
-    the electromagnatic one doesn't have relaoding but it overheats  it will have 3 behaviors
+	the electromagnatic one doesn't have relaoding but it overheats  it will have 3 behaviors
 
 Pistol – Fast fire, low heat
 
@@ -41,9 +41,9 @@ Sniper – High heat, big damage
 
 Rifle – Balanced output
 
-    this will be better for targeting enemies,  enemies with shields, robots and it will have higher damage
+	this will be better for targeting enemies,  enemies with shields, robots and it will have higher damage
 
-    the ballistic one have relaoding but doesn't overheat it will also have 3 behaviors
+	the ballistic one have relaoding but doesn't overheat it will also have 3 behaviors
 
 Shotgun – Burst + knockback
 
@@ -51,12 +51,12 @@ Rocket Launcher –   explosion area + knockback
 
 LMG – High mag, suppressing fire
 
-    this will be better for enemy crowd controll armored enemies, biological enemies and it will have lower damage
+	this will be better for enemy crowd controll armored enemies, biological enemies and it will have lower damage
 
-    the other modifier is for an improved state like firerate, damage,relaod,
-    it also can improve the damage if the player did a combo with the 2 different weapons categories to force him to balance between the 2 of them
+	the other modifier is for an improved state like firerate, damage,relaod,
+	it also can improve the damage if the player did a combo with the 2 different weapons categories to force him to balance between the 2 of them
 
-    Chainbreaker Core
+	Chainbreaker Core
 Effect: "Ballistic kills grant a 2s window where EM shots crit."
 
 Use Case: Encourages switching after a crowd-clear to pick off stronger enemies.
@@ -77,19 +77,19 @@ Effect: "If you hit an EM enemy with Ballistic melee, gain a temporary shield. I
 Use: Reward for countering the right type of enemy with the "wrong" weapon.
 Melee:-
 
-    ballistic:-
+	ballistic:-
 
-    it will have higher damage and lower speed
+	it will have higher damage and lower speed
 
-    it will be better with biological enemies
+	it will be better with biological enemies
 
-    it is better for finishing an enemy
+	it is better for finishing an enemy
 
-    effects
+	effects
 
-    bleed
+	bleed
 
-    knockback
+	knockback
 
 mods:
 
@@ -102,25 +102,25 @@ chainsaw
 adrinaline rush chance
 
 
-    EM:-
+	EM:-
 
-    higher speed and lower damage
+	higher speed and lower damage
 
-     it is better for robots
+	 it is better for robots
 
-    better for creating an opening
+	better for creating an opening
 
-    stun
+	stun
 
-    energy drain
+	energy drain
 
-    futuristic katana
+	futuristic katana
 
-    lighting chain ability chance
+	lighting chain ability chance
 
-    energy whip
+	energy whip
 
-    stun range ability
+	stun range ability
 
 
 consumables:-
