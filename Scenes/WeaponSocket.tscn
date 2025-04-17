@@ -1,6 +1,7 @@
-[gd_scene load_steps=31 format=3 uid="uid://dka6ru03kru0v"]
+[gd_scene load_steps=32 format=3 uid="uid://dka6ru03kru0v"]
 
 [ext_resource type="Texture2D" uid="uid://hmgc3xp0acgp" path="res://Assets/lightsaber_blue_normal-32.png" id="1_fllus"]
+[ext_resource type="Script" uid="uid://voq3bkbg2x72" path="res://Scripts/WeaponSocket.gd" id="1_ke2wp"]
 [ext_resource type="Texture2D" uid="uid://urqmxrba70cl" path="res://Placeholders/placeholder32.png" id="1_yde48"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ke2wp"]
@@ -211,6 +212,7 @@ animations = [{
 }]
 
 [node name="WeaponSocket" type="Node2D"]
+script = ExtResource("1_ke2wp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(17, -4.532)

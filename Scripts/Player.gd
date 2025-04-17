@@ -8,6 +8,7 @@ extends CharacterBody2D
 
 @onready var weapon_socket: Node2D = $WeaponSocket
 
+
 @export var radius: float = 10  # Distance from player to weapon
 
 const OFFSET = 16
@@ -70,13 +71,16 @@ func _process(_delta: float) -> void:
 	weapon_socket.rotation = mouseDirection.angle()
 	weapon_socket.position = weapon_pos
 	if Input.is_action_just_pressed("fire"):
-		var bullet_instance = Bullet.instantiate()
-		bullet_instance.global_position = weapon_socket.global_position
-		var direction = (get_global_mouse_position() - weapon_socket.global_position).normalized()
-		bullet_instance.velocity = direction * 600
-		bullet_instance.rotation = direction.angle()
-		#weapon_socket.add_child(bullet_instance)
-		get_tree().current_scene.add_child(bullet_instance)
+		weapon_socket.fire()
+	
+	#if Input.is_action_just_pressed("fire"):
+		#var bullet_instance = Bullet.instantiate()
+		#bullet_instance.global_position = weapon_socket.global_position
+		#var direction = (get_global_mouse_position() - weapon_socket.global_position).normalized()
+		#bullet_instance.velocity = direction * 600
+		#bullet_instance.rotation = direction.angle()
+		##weapon_socket.add_child(bullet_instance)
+		#get_tree().current_scene.add_child(bullet_instance)
 
 #func _input(event):
 	#if event is InputEventMouseButton:

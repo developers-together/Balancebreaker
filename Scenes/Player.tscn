@@ -54,5 +54,3 @@ visible = false
 shape = SubResource("CapsuleShape2D_52ee3")
 
 [node name="WeaponSocket" parent="." instance=ExtResource("4_dewec")]
-position = Vector2(7.5, 0)
-scale = Vector2(0.215, 0.215)
