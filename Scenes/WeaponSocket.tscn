@@ -1,8 +1,9 @@
-[gd_scene load_steps=32 format=3 uid="uid://dka6ru03kru0v"]
+[gd_scene load_steps=34 format=3 uid="uid://dka6ru03kru0v"]
 
 [ext_resource type="Texture2D" uid="uid://hmgc3xp0acgp" path="res://Assets/lightsaber_blue_normal-32.png" id="1_fllus"]
 [ext_resource type="Script" uid="uid://voq3bkbg2x72" path="res://Scripts/WeaponSocket.gd" id="1_ke2wp"]
 [ext_resource type="Texture2D" uid="uid://urqmxrba70cl" path="res://Placeholders/placeholder32.png" id="1_yde48"]
+[ext_resource type="Texture2D" uid="uid://c1364520ixac0" path="res://Assets/laser/laser_pistol-32-0010.png" id="3_n0fqr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ke2wp"]
 atlas = ExtResource("1_fllus")
@@ -108,6 +109,10 @@ region = Rect2(352, 0, 32, 32)
 atlas = ExtResource("1_fllus")
 region = Rect2(384, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyxcm"]
+atlas = ExtResource("3_n0fqr")
+region = Rect2(0, 0, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wsjr"]
 atlas = ExtResource("1_yde48")
 region = Rect2(0, 0, 69, 32)
@@ -204,6 +209,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_hyxcm")
+}],
+"loop": true,
+"name": &"laser",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_1wsjr")
 }],
 "loop": true,
@@ -215,9 +228,8 @@ animations = [{
 script = ExtResource("1_ke2wp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(17, -4.532)
-scale = Vector2(1.5, 1.71675)
+position = Vector2(-1, -5)
+scale = Vector2(0.375, 0.429188)
 sprite_frames = SubResource("SpriteFrames_mei5x")
-animation = &"Light Saber blue out"
-frame = 12
-frame_progress = 1.0
+animation = &"laser"
+flip_h = true

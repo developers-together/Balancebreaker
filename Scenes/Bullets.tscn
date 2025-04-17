@@ -1,7 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://bxc40d5yytxk3"]
+[gd_scene load_steps=26 format=3 uid="uid://bxc40d5yytxk3"]
 
 [ext_resource type="Script" uid="uid://mgbunug0w6av" path="res://Scripts/Bullets.gd" id="1_rayda"]
 [ext_resource type="Texture2D" uid="uid://bk7hiedqisq2b" path="res://Assets/bullet-32.png" id="2_rayda"]
+[ext_resource type="Texture2D" uid="uid://cv5orm07ulbo3" path="res://Assets/laser/laser_bullet-32.png" id="3_nriir"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nriir"]
 atlas = ExtResource("2_rayda")
@@ -63,6 +64,26 @@ region = Rect2(416, 0, 32, 32)
 atlas = ExtResource("2_rayda")
 region = Rect2(448, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_slrs8"]
+atlas = ExtResource("3_nriir")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb7gj"]
+atlas = ExtResource("3_nriir")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2acy0"]
+atlas = ExtResource("3_nriir")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8twe6"]
+atlas = ExtResource("3_nriir")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gk5xr"]
+atlas = ExtResource("3_nriir")
+region = Rect2(128, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_h3wt2"]
 animations = [{
 "frames": [{
@@ -114,21 +135,41 @@ animations = [{
 "loop": true,
 "name": &"bullet spin",
 "speed": 50.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slrs8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb7gj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2acy0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8twe6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gk5xr")
+}],
+"loop": true,
+"name": &"laser bullet",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_biy0t"]
-size = Vector2(6, 3)
+size = Vector2(7, 3)
 
 [node name="Bullets" type="Area2D"]
 script = ExtResource("1_rayda")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 2.84217e-14)
-scale = Vector2(0.403846, 0.333333)
+position = Vector2(2, 0)
+scale = Vector2(0.576923, 0.47619)
 sprite_frames = SubResource("SpriteFrames_h3wt2")
-animation = &"bullet spin"
-frame_progress = 0.925985
+animation = &"laser bullet"
+frame_progress = 0.58847
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
+position = Vector2(-0.5, -1)
 shape = SubResource("RectangleShape2D_biy0t")
