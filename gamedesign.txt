@@ -1,0 +1,157 @@
+player main character the starter character starts with improved state for a type of weapons
+
+Ballistic Bot:
+
+Ballistic Bot – “Impact Core”
+Core Mechanic:
+Ballistic weapons charge up a “Kinetic Surge” not visable meter based on damage dealt
+• Small  blast
+
+
+
+
+Bonus Perk:
+might  apply Weakened to enemies for 3 seconds
+
+EM Bot:
+
+EM Bot – “Resonance Cascade”
+Core Mechanic:
+Each EM hit builds up a Resonance Charge. not visable
+At 100%, your next EM shot releases a homing pulse that jumps to nearby enemies.
+
+Bonus Perk:
+
+EM melee hits might hack the robot making it help the player.
+
+
+
+the weapon mechanics works as the following:-
+
+Ranged:-
+
+
+    the first weapon is a ranged one with 2 modifiers one for the type of weapon either ballistic or electromagnatic and the behavior  such as shotgun, rifle, pistol,sniper,rocket launcher and it can be others
+
+    the electromagnatic one doesn't have relaoding but it overheats  it will have 3 behaviors
+
+Pistol – Fast fire, low heat
+
+Sniper – High heat, big damage
+
+Rifle – Balanced output
+
+    this will be better for targeting enemies,  enemies with shields, robots and it will have higher damage
+
+    the ballistic one have relaoding but doesn't overheat it will also have 3 behaviors
+
+Shotgun – Burst + knockback
+
+Rocket Launcher –   explosion area + knockback
+
+LMG – High mag, suppressing fire
+
+    this will be better for enemy crowd controll armored enemies, biological enemies and it will have lower damage
+
+    the other modifier is for an improved state like firerate, damage,relaod,
+    it also can improve the damage if the player did a combo with the 2 different weapons categories to force him to balance between the 2 of them
+
+    Chainbreaker Core
+Effect: "Ballistic kills grant a 2s window where EM shots crit."
+
+Use Case: Encourages switching after a crowd-clear to pick off stronger enemies.
+
+Recoil Loop
+Effect: "Switching weapons within 2s of a kill gives +15% damage on next hit."
+
+Use Case: Classic momentum-chaining playstyle.
+
+Pulse Tap Node
+Effect: "EM damage stuns enemies. Switching to Ballistic deals critical damage to stuned enemies."
+
+Use Case: Makes CC setups viable without special weapons.
+
+Shield Link Injector
+Effect: "If you hit an EM enemy with Ballistic melee, gain a temporary shield. If you hit a biological enemy with EM, regenerate 5% health."
+
+Use: Reward for countering the right type of enemy with the "wrong" weapon.
+Melee:-
+
+    ballistic:-
+
+    it will have higher damage and lower speed
+
+    it will be better with biological enemies
+
+    it is better for finishing an enemy
+
+    effects
+
+    bleed
+
+    knockback
+
+mods:
+
+warhammer
+
+ shockwave ability chance
+
+chainsaw
+
+adrinaline rush chance
+
+
+    EM:-
+
+    higher speed and lower damage
+
+     it is better for robots
+
+    better for creating an opening
+
+    stun
+
+    energy drain
+
+    futuristic katana
+
+    lighting chain ability chance
+
+    energy whip
+
+    stun range ability
+
+
+consumables:-
+
+it will be some basic stuff such as:-
+
+battaries (health)
+
+circuits to fix broken mods
+
+gernades
+
+emp
+
+temporary shield
+
+
+the player should be forced to combine both of the categories by focusing on his weakness in the game
+
+the enemies will be aliens and robots
+
+
+Shielded Robots – Reflect ballistic damage until stunned with EM
+
+Swarm Aliens – Overwhelm players using slow EM weapons unless cleared with Ballistics
+
+Overcharger Bot – Causes EM weapons to overheat instantly if spammed
+
+Leeching Alien – Regenerates from EM damage unless finished with physical weapons
+
+ “Adaptive Core” Enemies
+These special enemies shift resistances over time — e.g.:
+
+Take more EM damage at range, more Ballistic in melee

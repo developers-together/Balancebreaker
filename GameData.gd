@@ -1,4 +1,4 @@
 extends Node
 
 
-var PlayerPath:String
+var Player: String = ""

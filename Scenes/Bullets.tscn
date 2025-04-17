@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxc40d5yytxk3"]
+
+[ext_resource type="Script" uid="uid://mgbunug0w6av" path="res://Scripts/Bullets.gd" id="1_rayda"]
+[ext_resource type="Texture2D" uid="uid://urqmxrba70cl" path="res://Placeholders/placeholder32.png" id="2_nriir"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4o4n"]
+atlas = ExtResource("2_nriir")
+region = Rect2(0, 144, 104, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h3wt2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4o4n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_biy0t"]
+size = Vector2(101, 20)
+
+[node name="Bullets" type="Area2D"]
+script = ExtResource("1_rayda")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_h3wt2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_biy0t")
