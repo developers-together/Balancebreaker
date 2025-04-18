@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dcabsg7cu7ajn"]
+[gd_scene load_steps=8 format=3 uid="uid://dcabsg7cu7ajn"]
 
 [ext_resource type="Script" uid="uid://doasnjtfwnd56" path="res://Scripts/Player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://hp36w64pu8nu" path="res://Placeholders/Silly_Placeholders.png" id="2_gntrk"]
-[ext_resource type="PackedScene" uid="uid://bxc40d5yytxk3" path="res://Scenes/Bullets.tscn" id="3_gntrk"]
 [ext_resource type="PackedScene" uid="uid://dka6ru03kru0v" path="res://Scenes/WeaponSocket.tscn" id="4_dewec"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dewec"]
@@ -47,10 +46,9 @@ position_smoothing_enabled = true
 sprite_frames = SubResource("SpriteFrames_nn08x")
 animation = &"VX09"
 
-[node name="Bullets" parent="." instance=ExtResource("3_gntrk")]
-visible = false
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_52ee3")
 
 [node name="WeaponSocket" parent="." instance=ExtResource("4_dewec")]
+
+[node name="WeaponSelector" type="Node" parent="."]

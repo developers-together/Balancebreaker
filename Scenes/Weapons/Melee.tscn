@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc8eh28ljuv6e"]
+
+[ext_resource type="Texture2D" uid="uid://hmgc3xp0acgp" path="res://Assets/lightsaber_blue_normal-32.png" id="1_nn8kx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cf4i"]
+atlas = ExtResource("1_nn8kx")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p3kd4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cf4i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Melee" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_p3kd4")

@@ -2,8 +2,6 @@ extends CharacterBody2D
 
 @export var speed = 400
 
-@onready var game_manager: Node = %GameManager
-
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 @onready var weapon_socket: Node2D = $WeaponSocket
@@ -14,8 +12,6 @@ extends CharacterBody2D
 const OFFSET = 16
 
 #signal shoot(bullet, direction, location)
-
-var Bullet = preload('res://Scenes/Bullets.tscn')
 
 func GetInput():
 	
@@ -70,8 +66,8 @@ func _process(_delta: float) -> void:
 	weapon_socket.look_at(get_global_mouse_position())
 	weapon_socket.rotation = mouseDirection.angle()
 	weapon_socket.position = weapon_pos
-	if Input.is_action_just_pressed("fire"):
-		weapon_socket.fire()
+	if Input.is_action_pressed("fire"):
+		weapon_socket.ranged.fire()
 	
 	#if Input.is_action_just_pressed("fire"):
 		#var bullet_instance = Bullet.instantiate()
