@@ -69,7 +69,7 @@ func _process(_delta: float) -> void:
 	var mouse_pos = get_global_mouse_position()
 	var mouseDirection = (mouse_pos - global_position).normalized()
 	var weapon_pos = mouseDirection * radius
-	weapon_socket.look_at(get_global_mouse_position())
+	weapon_socket.look_at(mouse_pos)
 	weapon_socket.rotation = mouseDirection.angle()
 	weapon_socket.position = weapon_pos
 	if Input.is_action_pressed("fire"):
