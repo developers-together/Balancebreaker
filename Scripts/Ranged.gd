@@ -23,7 +23,7 @@ func fire():
 	
 	
 	
-	WeaponScenes.projectiles.append({
+	WeaponScenes.Projectiles.append({
 		"projectile": bullet_instance,
 		"velocity": bullet_instance.velocity,
 		"ticks": 0

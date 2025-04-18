@@ -8,6 +8,9 @@ extends CharacterBody2D
 
 @export var radius: float = 10  # Distance from player to weapon
 
+@onready var rx_42: Node = $RX42
+@onready var vx_09: Node = $VX09
+
 const OFFSET = 16
 
 #signal shoot(bullet, direction, location)
@@ -39,9 +42,10 @@ func GetInput():
 func _ready() -> void:
 	
 	if GameData.Player=="RX42":
-		animated_sprite_2d.play("RX42")
+		rx_42.Ready()
+		
 	elif GameData.Player=="VX09":
-		animated_sprite_2d.play("VX09")
+		vx_09.Ready()
 	
 func _physics_process(_delta):
 	

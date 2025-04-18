@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://dcabsg7cu7ajn"]
+[gd_scene load_steps=69 format=3 uid="uid://dcabsg7cu7ajn"]
 
 [ext_resource type="Script" uid="uid://doasnjtfwnd56" path="res://Scripts/Player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://hp36w64pu8nu" path="res://Placeholders/Silly_Placeholders.png" id="2_gntrk"]
@@ -10,14 +10,16 @@
 [ext_resource type="Texture2D" uid="uid://bfq742retfufj" path="res://Assets/Blue Character/Blue_character_move_right-32.png" id="7_o3h8g"]
 [ext_resource type="Texture2D" uid="uid://cihuabcihhcpr" path="res://Assets/Blue Character/Blue_character_move_up-32.png" id="8_1e7my"]
 [ext_resource type="Texture2D" uid="uid://dbh105ui44e6a" path="res://Assets/Blue Character/Blue_character_thinking-32.png" id="9_arntx"]
+[ext_resource type="Script" uid="uid://bovw1h8jouvd" path="res://Scripts/RX42.gd" id="11_ksbbd"]
+[ext_resource type="Script" uid="uid://btcin0ffo6drt" path="res://Scripts/VX09.gd" id="12_glx4g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dewec"]
 atlas = ExtResource("2_gntrk")
 region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5ixxa"]
-atlas = ExtResource("2_gntrk")
-region = Rect2(48, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_glx4g"]
+atlas = ExtResource("3_5ixxa")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lslt6"]
 atlas = ExtResource("4_ksbbd")
@@ -239,7 +241,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5ixxa")
+"texture": SubResource("AtlasTexture_glx4g")
 }],
 "loop": true,
 "name": &"VX09",
@@ -450,7 +452,7 @@ position_smoothing_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_nn08x")
-animation = &"VX09Think"
+animation = &"VX09"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_52ee3")
@@ -461,3 +463,9 @@ position = Vector2(8, 0)
 [node name="WeaponSocket" parent="Marker2D" instance=ExtResource("4_dewec")]
 z_index = 10
 position = Vector2(14, 1)
+
+[node name="RX42" type="Node" parent="."]
+script = ExtResource("11_ksbbd")
+
+[node name="VX09" type="Node" parent="."]
+script = ExtResource("12_glx4g")
