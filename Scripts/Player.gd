@@ -10,30 +10,47 @@ extends CharacterBody2D
 
 const OFFSET = 16
 
-#signal shoot(bullet, direction, location)
+var idle_time := 0.0
+const THINK_TRIGGER_TIME := 10.0
 
-func GetInput():
+#signal shoot(bullet, direction, location)
+var is_thinking := false
+
+func GetInput(delta):
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
 
 	if input_direction != Vector2.ZERO:
+		# Reset idle logic
+		idle_time = 0.0
+		is_thinking = false
+		
+		# Movement animations
 		if input_direction.y > 0:
 			animated_sprite_2d.play("VX09MoveDown")
 		elif input_direction.y < 0:
 			animated_sprite_2d.play("VX09MoveUP")
 		elif input_direction.x != 0:
-			animated_sprite_2d.play("VX09MoveRight")  # Always play the right animation for horizontal movement
+			animated_sprite_2d.play("VX09MoveRight")
 	else:
-		animated_sprite_2d.stop()  # Stop animation when not moving
+		# Player is idle
+		if not is_thinking:
+			idle_time += delta
 
-	# Handle flipping and weapon socket positioning
+			if idle_time >= THINK_TRIGGER_TIME:
+				animated_sprite_2d.play("VX09Think")
+				is_thinking = true
+			else:
+				animated_sprite_2d.play("VX09")  # Regular idle
+
+	# Handle flipping and weapon socket
 	if input_direction.x == -1:
-		animated_sprite_2d.flip_h = true  # Flip for left
+		animated_sprite_2d.flip_h = true
 		weapon_socket.position.x = -OFFSET
 	elif input_direction.x == 1:
-		animated_sprite_2d.flip_h = false  # No flip for right
+		animated_sprite_2d.flip_h = false
 		weapon_socket.position.x = OFFSET - 10
-		
+
 func _ready() -> void:
 	
 	if GameData.Player=="RX42":
@@ -43,7 +60,7 @@ func _ready() -> void:
 	
 func _physics_process(_delta):
 	
-	GetInput()
+	GetInput(_delta)
 	move_and_slide()
 	
 	#if game_manager.GetCharacter() == "VX-09":

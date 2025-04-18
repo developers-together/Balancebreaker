@@ -607,14 +607,14 @@ height = 14.0
 script = ExtResource("1_kyqiw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+zoom = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_nn08x")
-animation = &"VX09Think"
+animation = &"VX09"
 autoplay = "VX09"
-frame_progress = 0.89535
+frame_progress = 0.668687
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_52ee3")
