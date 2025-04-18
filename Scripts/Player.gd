@@ -1,11 +1,10 @@
 extends CharacterBody2D
 
-@export var speed = 400
+@export var speed = 150
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-@onready var weapon_socket: Node2D = $WeaponSocket
-
+@onready var weapon_socket: Node2D = $Marker2D/WeaponSocket
 
 @export var radius: float = 10  # Distance from player to weapon
 
@@ -14,22 +13,29 @@ const OFFSET = 16
 #signal shoot(bullet, direction, location)
 
 func GetInput():
-	
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
-	
+
+	if input_direction != Vector2.ZERO:
+		if input_direction.y > 0:
+			animated_sprite_2d.play("VX09MoveDown")
+		elif input_direction.y < 0:
+			animated_sprite_2d.play("VX09MoveUP")
+		elif input_direction.x < 0:
+			animated_sprite_2d.play("VX09MoveLeft")
+		elif input_direction.x > 0:
+			animated_sprite_2d.play("VX09MoveRight")
+	else:
+		animated_sprite_2d.stop()  # Stop animation when not moving
+
+	# Handle flipping and weapon socket positioning
 	if input_direction.x == -1:
-		
-		animated_sprite_2d.flip_h= true
-		
-		weapon_socket.position.x = -1 * (OFFSET)
-		
-	if input_direction.x == 1:
-		
-		animated_sprite_2d.flip_h= false
-		
+		animated_sprite_2d.flip_h = false  # Left
+		weapon_socket.position.x = -OFFSET
+	elif input_direction.x == 1:
+		animated_sprite_2d.flip_h = false  # Right
 		weapon_socket.position.x = OFFSET - 10
-		
+
 func _ready() -> void:
 	
 	if GameData.Player=="RX42":
