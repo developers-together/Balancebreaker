@@ -168,7 +168,7 @@ position = Vector2(2, 0)
 scale = Vector2(0.576923, 0.47619)
 sprite_frames = SubResource("SpriteFrames_h3wt2")
 animation = &"laser bullet"
-frame_progress = 0.58847
+frame_progress = 0.676918
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -1)

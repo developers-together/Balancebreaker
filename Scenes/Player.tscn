@@ -20,22 +20,6 @@ region = Rect2(32, 0, 16, 16)
 atlas = ExtResource("2_gntrk")
 region = Rect2(48, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nn08x"]
-atlas = ExtResource("3_5ixxa")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_52ee3"]
-atlas = ExtResource("3_5ixxa")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bhhdu"]
-atlas = ExtResource("3_5ixxa")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_megsn"]
-atlas = ExtResource("3_5ixxa")
-region = Rect2(96, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_lslt6"]
 atlas = ExtResource("4_ksbbd")
 region = Rect2(0, 0, 32, 32)
@@ -99,6 +83,22 @@ region = Rect2(128, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_avx33"]
 atlas = ExtResource("5_glx4g")
 region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn08x"]
+atlas = ExtResource("3_5ixxa")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52ee3"]
+atlas = ExtResource("3_5ixxa")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhhdu"]
+atlas = ExtResource("3_5ixxa")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_megsn"]
+atlas = ExtResource("3_5ixxa")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rxg2u"]
 atlas = ExtResource("6_miouo")
@@ -248,23 +248,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nn08x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_52ee3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bhhdu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_megsn")
-}],
-"loop": true,
-"name": &"VX09MoveDown",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_lslt6")
 }, {
 "duration": 1.0,
@@ -295,7 +278,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_8flut")
 }],
 "loop": true,
-"name": &"VX90Death",
+"name": &"VX09Death",
 "speed": 20.0
 }, {
 "frames": [{
@@ -318,8 +301,25 @@ animations = [{
 "texture": SubResource("AtlasTexture_avx33")
 }],
 "loop": true,
-"name": &"VX90Hurt",
+"name": &"VX09Hurt",
 "speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn08x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52ee3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhhdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_megsn")
+}],
+"loop": true,
+"name": &"VX09MoveDown",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -353,7 +353,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_6hr71")
 }],
 "loop": true,
-"name": &"VX90MoveLeft",
+"name": &"VX09MoveLeft",
 "speed": 10.0
 }, {
 "frames": [{
@@ -388,7 +388,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_3rw25")
 }],
 "loop": true,
-"name": &"VX90MoveRight",
+"name": &"VX09MoveRight",
 "speed": 10.0
 }, {
 "frames": [{
@@ -405,7 +405,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_fayk8")
 }],
 "loop": true,
-"name": &"VX90MoveUP",
+"name": &"VX09MoveUP",
 "speed": 5.0
 }, {
 "frames": [{
@@ -434,7 +434,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_h1ppb")
 }],
 "loop": true,
-"name": &"VX90Think",
+"name": &"VX09Think",
 "speed": 5.0
 }]
 
@@ -451,8 +451,7 @@ position_smoothing_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_nn08x")
-animation = &"VX09MoveDown"
-frame_progress = 0.755625
+animation = &"VX09Think"
 
 [node name="Bullets" parent="." instance=ExtResource("3_gntrk")]
 visible = false
@@ -460,4 +459,9 @@ visible = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_52ee3")
 
-[node name="WeaponSocket" parent="." instance=ExtResource("4_dewec")]
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(8, 0)
+
+[node name="WeaponSocket" parent="Marker2D" instance=ExtResource("4_dewec")]
+z_index = 10
+position = Vector2(14, 1)

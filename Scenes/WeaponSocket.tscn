@@ -228,8 +228,9 @@ animations = [{
 script = ExtResource("1_ke2wp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, -5)
+z_index = -5
 scale = Vector2(0.375, 0.429188)
 sprite_frames = SubResource("SpriteFrames_mei5x")
 animation = &"laser"
 flip_h = true
+metadata/_edit_lock_ = true
