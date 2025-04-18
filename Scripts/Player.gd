@@ -21,21 +21,19 @@ func GetInput():
 			animated_sprite_2d.play("VX09MoveDown")
 		elif input_direction.y < 0:
 			animated_sprite_2d.play("VX09MoveUP")
-		elif input_direction.x < 0:
-			animated_sprite_2d.play("VX09MoveLeft")
-		elif input_direction.x > 0:
-			animated_sprite_2d.play("VX09MoveRight")
+		elif input_direction.x != 0:
+			animated_sprite_2d.play("VX09MoveRight")  # Always play the right animation for horizontal movement
 	else:
 		animated_sprite_2d.stop()  # Stop animation when not moving
 
 	# Handle flipping and weapon socket positioning
 	if input_direction.x == -1:
-		animated_sprite_2d.flip_h = false  # Left
+		animated_sprite_2d.flip_h = true  # Flip for left
 		weapon_socket.position.x = -OFFSET
 	elif input_direction.x == 1:
-		animated_sprite_2d.flip_h = false  # Right
+		animated_sprite_2d.flip_h = false  # No flip for right
 		weapon_socket.position.x = OFFSET - 10
-
+		
 func _ready() -> void:
 	
 	if GameData.Player=="RX42":
