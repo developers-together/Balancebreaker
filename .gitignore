@@ -1,3 +1,10 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+Aseprite/.DS_Store
+.DS_Store
+Aseprite/Blue Character/.DS_Store
+Aseprite/Weapons/.DS_Store
+Aseprite/Weapons/Lightsaber/.DS_Store
+Aseprite/Weapons/Pistol/.DS_Store
+Aseprite/Weapons/Pistol/laser/.DS_Store
