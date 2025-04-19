@@ -1512,7 +1512,7 @@ position_smoothing_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_nn08x")
-animation = &"RX42Death"
+animation = &"RX42MoveRight"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_52ee3")
