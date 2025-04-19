@@ -1517,6 +1517,7 @@ frame_progress = 0.481274
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_52ee3")
+debug_color = Color(0.590382, 0.547674, 1.92523e-07, 0.42)
 
 [node name="VX09" type="Node2D" parent="."]
 script = ExtResource("16_ulo2v")
