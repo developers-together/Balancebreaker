@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://disn0epymeaa2"
-path="res://.godot/imported/Blue_character_hurt-32.png-74ac86bff10787edf3133eee2d93878d.ctex"
+uid="uid://c1qryjrb42fef"
+path="res://.godot/imported/Blue_character_move_up_no-hands-32.png-66056904ecdf59959b33158d7a3d23e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Blue Character/normal/Blue_character_hurt-32.png"
-dest_files=["res://.godot/imported/Blue_character_hurt-32.png-74ac86bff10787edf3133eee2d93878d.ctex"]
+source_file="res://Assets/Characters/Blue/no hands/Blue_character_move_up_no-hands-32.png"
+dest_files=["res://.godot/imported/Blue_character_move_up_no-hands-32.png-66056904ecdf59959b33158d7a3d23e9.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjxd5h11n35i3"
-path="res://.godot/imported/Blue_character_move_right_no-hands-2-32.png-98d55c714dfbcbbe9924451b8a2636c8.ctex"
+uid="uid://dpd8v0akclwee"
+path="res://.godot/imported/Blue_character_idle_no-hands-32.png-bafbd662ad539866fcd22f59b1f5769c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Blue Character/no hands/Blue_character_move_right_no-hands-2-32.png"
-dest_files=["res://.godot/imported/Blue_character_move_right_no-hands-2-32.png-98d55c714dfbcbbe9924451b8a2636c8.ctex"]
+source_file="res://Assets/Characters/Blue/no hands/Blue_character_idle_no-hands-32.png"
+dest_files=["res://.godot/imported/Blue_character_idle_no-hands-32.png-bafbd662ad539866fcd22f59b1f5769c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj51ckxyj3jqf"
-path="res://.godot/imported/Blue_character_death-32.png-d9b4253fbd90b87d0a8b684d8f116060.ctex"
+uid="uid://dg3ecw1mr7u2"
+path="res://.godot/imported/laser_pistol_blue_with-hand-32.png-1b13b371d4b326223ef250f232964648.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Blue Character/normal/Blue_character_death-32.png"
-dest_files=["res://.godot/imported/Blue_character_death-32.png-d9b4253fbd90b87d0a8b684d8f116060.ctex"]
+source_file="res://Assets/Weapons/Pistol/laser/blue/laser_pistol_blue_with-hand-32.png"
+dest_files=["res://.godot/imported/laser_pistol_blue_with-hand-32.png-1b13b371d4b326223ef250f232964648.ctex"]
 
 [params]
 

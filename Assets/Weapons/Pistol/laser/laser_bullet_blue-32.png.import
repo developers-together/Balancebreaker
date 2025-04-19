@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cihuabcihhcpr"
-path="res://.godot/imported/Blue_character_move_up-32.png-72afc28d73ed5d2114e6156488be6d9d.ctex"
+uid="uid://djwp66bnk62ly"
+path="res://.godot/imported/laser_bullet_blue-32.png-b5868f8db5710e983a80834e4038a33e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Blue Character/normal/Blue_character_move_up-32.png"
-dest_files=["res://.godot/imported/Blue_character_move_up-32.png-72afc28d73ed5d2114e6156488be6d9d.ctex"]
+source_file="res://Assets/Weapons/Pistol/laser/laser_bullet_blue-32.png"
+dest_files=["res://.godot/imported/laser_bullet_blue-32.png-b5868f8db5710e983a80834e4038a33e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be7408otpcw2e"
-path="res://.godot/imported/Blue_character_move_down_no-hands-32.png-96261e002ab8a7548815c285c24988ab.ctex"
+uid="uid://cydyo7so0cyml"
+path="res://.godot/imported/laser_pistol_firing_blue_with-hand-32.png-1ddcedfa99e6aa0847dfdd2581fafa05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Blue Character/no hands/Blue_character_move_down_no-hands-32.png"
-dest_files=["res://.godot/imported/Blue_character_move_down_no-hands-32.png-96261e002ab8a7548815c285c24988ab.ctex"]
+source_file="res://Assets/Weapons/Pistol/laser/blue/laser_pistol_firing_blue_with-hand-32.png"
+dest_files=["res://.godot/imported/laser_pistol_firing_blue_with-hand-32.png-1ddcedfa99e6aa0847dfdd2581fafa05.ctex"]
 
 [params]
 
