@@ -8,11 +8,6 @@ extends CharacterBody2D
 
 @export var radius: float = 10  # Distance from player to weapon
 
-
-#@onready var rx_42: Node = $RX42
-#@onready var vx_09: Node = $VX09
-
-
 const OFFSET = 16
 
 var idle_time := 0.0
@@ -65,28 +60,10 @@ func _ready() -> void:
 		player_id = "VX09"
 
 	
-	
-	
 func _physics_process(_delta):
 	GetInput(_delta)
 	move_and_slide()
 	
-	#if game_manager.GetCharacter() == "VX-09":
-		#animated_sprite_2d.play("VX-09")
-		#
-	#elif game_manager.GetCharacter() == "RX-42":
-		#
-		#animated_sprite_2d.play("RX-42")
-	
-#func _ready() -> void:
-	#
-		#game_manager.UseVX09()
-
-#func _process(_delta: float) -> void:
-	#weapon_socket.look_at(get_global_mouse_position())
-	#if Input.is_action_pressed("fire"):
-		#var Bullets = Bullet.instantiate()
-		#weapon_socket.add_child(Bullets)
 
 func _process(_delta: float) -> void:
 	var mouse_pos = get_global_mouse_position()
@@ -102,16 +79,3 @@ func _process(_delta: float) -> void:
 		weapon_socket.ChangeWeapon(1)
 	if Input.is_action_just_pressed("consumable"):
 		weapon_socket.ChangeWeapon(2)
-	#if Input.is_action_just_pressed("fire"):
-		#var bullet_instance = Bullet.instantiate()
-		#bullet_instance.global_position = weapon_socket.global_position
-		#var direction = (get_global_mouse_position() - weapon_socket.global_position).normalized()
-		#bullet_instance.velocity = direction * 600
-		#bullet_instance.rotation = direction.angle()
-		##weapon_socket.add_child(bullet_instance)
-		#get_tree().current_scene.add_child(bullet_instance)
-
-#func _input(event):
-	#if event is InputEventMouseButton:
-		#if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			#shoot.emit(Bullet, weapon_socket.rotation, weapon_socket.position)
