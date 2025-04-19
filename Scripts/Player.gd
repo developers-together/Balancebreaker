@@ -16,6 +16,8 @@ const THINK_TRIGGER_TIME := 10.0
 #signal shoot(bullet, direction, location)
 var is_thinking := false
 
+var player_id: String = ""
+
 func GetInput(delta):
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
@@ -27,21 +29,21 @@ func GetInput(delta):
 		
 		# Movement animations
 		if input_direction.y > 0:
-			animated_sprite_2d.play("VX09MoveDown")
+			animated_sprite_2d.play(player_id+"MoveDown")
 		elif input_direction.y < 0:
-			animated_sprite_2d.play("VX09MoveUP")
+			animated_sprite_2d.play(player_id+"MoveUp")
 		elif input_direction.x != 0:
-			animated_sprite_2d.play("VX09MoveRight")
+			animated_sprite_2d.play(player_id+"MoveRight")
 	else:
 		# Player is idle
 		if not is_thinking:
 			idle_time += delta
 
 			if idle_time >= THINK_TRIGGER_TIME:
-				animated_sprite_2d.play("VX09Think")
+				animated_sprite_2d.play(player_id+"Think")
 				is_thinking = true
 			else:
-				animated_sprite_2d.play("VX09")  # Regular idle
+				animated_sprite_2d.play(player_id)  # Regular idle
 
 	# Handle flipping and weapon socket
 	if input_direction.x == -1:
@@ -52,14 +54,12 @@ func GetInput(delta):
 		weapon_socket.position.x = OFFSET - 10
 
 func _ready() -> void:
-	
 	if GameData.Player=="RX42":
-		animated_sprite_2d.play("RX42")
+		player_id ="RX42"
 	elif GameData.Player=="VX09":
-		animated_sprite_2d.play("VX09")
+		player_id = "VX09"
 	
 func _physics_process(_delta):
-	
 	GetInput(_delta)
 	move_and_slide()
 	
