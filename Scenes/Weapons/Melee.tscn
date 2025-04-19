@@ -1,6 +1,6 @@
 [gd_scene load_steps=55 format=3 uid="uid://cc8eh28ljuv6e"]
 
-[ext_resource type="Script" uid="uid://cdnyj3eouwjv8" path="res://Scripts/Melee.gd" id="1_5cf4i"]
+[ext_resource type="Script" uid="uid://cahnmvhtpnxo2" path="res://Scripts/Weapons/Melee.gd" id="1_5cf4i"]
 [ext_resource type="Texture2D" uid="uid://miidu23nyrfl" path="res://Assets/Weapons/Lightsaber/ultimate/lightsaber_blue_ult-32.png" id="2_5cf4i"]
 [ext_resource type="Texture2D" uid="uid://d1qhxnue5l1u3" path="res://Assets/Weapons/Lightsaber/ultimate/lightsaber_red_ult-32.png" id="3_22qrq"]
 [ext_resource type="Texture2D" uid="uid://hp7fdl7f7f2i" path="res://Assets/Weapons/Sword/sword-32.png" id="3_a8q2o"]
