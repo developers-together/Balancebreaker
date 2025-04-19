@@ -324,8 +324,7 @@ script = ExtResource("1_rayda")
 position = Vector2(3, 4.76837e-07)
 scale = Vector2(0.576923, 0.47619)
 sprite_frames = SubResource("SpriteFrames_h3wt2")
-animation = &"BlueLaserBullet"
-frame_progress = 0.718772
+animation = &"ShoutgunBullet"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -1)

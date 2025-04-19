@@ -2,9 +2,16 @@ extends Area2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+@export var CoolDown = 1
+
+@export var Damage:int
+
+@export var EM:bool
+
 func _ready() -> void:
-	WeaponScenes.MeleeCooldown = 1
-	WeaponScenes.MeleeLastShot = 1
+	
+	WeaponScenes.MeleeCooldown = CoolDown
+	WeaponScenes.MeleeLastShot = CoolDown
 
 func Attack():
 	if WeaponScenes.MeleeLastShot > WeaponScenes.MeleeCooldown:
