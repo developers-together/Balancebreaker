@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1364520ixac0"
-path="res://.godot/imported/laser_pistol-32-0010.png-1b33f3a29e02f2c6ae4078afbbda55f0.ctex"
+uid="uid://dcd6bmxik7mxm"
+path="res://.godot/imported/Pistol-32.png-63429872d194e2dc3a44c83baa0998d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/laser/laser_pistol-32-0010.png"
-dest_files=["res://.godot/imported/laser_pistol-32-0010.png-1b33f3a29e02f2c6ae4078afbbda55f0.ctex"]
+source_file="res://Assets/Weapons/Pistol/classic/Pistol-32.png"
+dest_files=["res://.godot/imported/Pistol-32.png-63429872d194e2dc3a44c83baa0998d2.ctex"]
 
 [params]
 

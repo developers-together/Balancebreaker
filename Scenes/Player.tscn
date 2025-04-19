@@ -1512,7 +1512,8 @@ position_smoothing_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_nn08x")
-animation = &"RX42MoveRight"
+animation = &"RX42"
+frame_progress = 0.481274
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_52ee3")
@@ -1528,3 +1529,4 @@ position = Vector2(8, 0)
 
 [node name="WeaponSocket" parent="Marker2D" instance=ExtResource("4_dewec")]
 z_index = 10
+position = Vector2(14, 1)

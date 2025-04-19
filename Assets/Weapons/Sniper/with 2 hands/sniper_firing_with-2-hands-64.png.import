@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hmgc3xp0acgp"
-path="res://.godot/imported/lightsaber_blue_normal-32.png-f7eedfc43a349eb0d5e2d5eedf954a00.ctex"
+uid="uid://ctk2hs7ipb406"
+path="res://.godot/imported/sniper_firing_with-2-hands-64.png-7e7457b0e4515d3f3572b86522572fef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/lightsaber_blue_normal-32.png"
-dest_files=["res://.godot/imported/lightsaber_blue_normal-32.png-f7eedfc43a349eb0d5e2d5eedf954a00.ctex"]
+source_file="res://Assets/Weapons/Sniper/with 2 hands/sniper_firing_with-2-hands-64.png"
+dest_files=["res://.godot/imported/sniper_firing_with-2-hands-64.png-7e7457b0e4515d3f3572b86522572fef.ctex"]
 
 [params]
 

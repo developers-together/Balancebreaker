@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djwp66bnk62ly"
-path="res://.godot/imported/laser_bullet_blue-32.png-b5868f8db5710e983a80834e4038a33e.ctex"
+uid="uid://cgqsbtudwgl7k"
+path="res://.godot/imported/lightsaber_red_normal_effect-32.png-3ec45faddd9ac8cee7093d1f016744a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Weapons/Pistol/laser/laser_bullet_blue-32.png"
-dest_files=["res://.godot/imported/laser_bullet_blue-32.png-b5868f8db5710e983a80834e4038a33e.ctex"]
+source_file="res://Assets/Weapons/Lightsaber/shadow/lightsaber_red_normal_effect-32.png"
+dest_files=["res://.godot/imported/lightsaber_red_normal_effect-32.png-3ec45faddd9ac8cee7093d1f016744a3.ctex"]
 
 [params]
 

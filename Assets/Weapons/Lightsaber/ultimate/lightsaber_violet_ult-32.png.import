@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk7hiedqisq2b"
-path="res://.godot/imported/bullet-32.png-6778e463ffeb32ff3fe24242fc761803.ctex"
+uid="uid://cgv5k2ox7sg6q"
+path="res://.godot/imported/lightsaber_violet_ult-32.png-75268f5fc299fc7b6736620a5c1431cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/bullet-32.png"
-dest_files=["res://.godot/imported/bullet-32.png-6778e463ffeb32ff3fe24242fc761803.ctex"]
+source_file="res://Assets/Weapons/Lightsaber/ultimate/lightsaber_violet_ult-32.png"
+dest_files=["res://.godot/imported/lightsaber_violet_ult-32.png-75268f5fc299fc7b6736620a5c1431cf.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcd6bmxik7mxm"
-path="res://.godot/imported/Pistol-32.png-942c504d74c9a7a15b0344c476a909de.ctex"
+uid="uid://biqqsnyrwnhs2"
+path="res://.godot/imported/Gernade_normal_green-32.png-8bf8c3dadefd526bc7ee5cc50e39c63a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pistol-32.png"
-dest_files=["res://.godot/imported/Pistol-32.png-942c504d74c9a7a15b0344c476a909de.ctex"]
+source_file="res://Assets/utilities/Gernades/Normal/normal/Gernade_normal_green-32.png"
+dest_files=["res://.godot/imported/Gernade_normal_green-32.png-8bf8c3dadefd526bc7ee5cc50e39c63a.ctex"]
 
 [params]
 
