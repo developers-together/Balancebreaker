@@ -1525,8 +1525,7 @@ script = ExtResource("16_ulo2v")
 script = ExtResource("17_1iu4k")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(8, 0)
 
 [node name="WeaponSocket" parent="Marker2D" instance=ExtResource("4_dewec")]
 z_index = 10
-position = Vector2(14, 1)
+position = Vector2(-8, 0)

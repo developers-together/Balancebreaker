@@ -556,8 +556,8 @@ animations = [{
 script = ExtResource("2_ehj5m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(8, 0)
+position = Vector2(-1.19209e-07, -3.25261e-19)
 scale = Vector2(0.615814, 0.615814)
 sprite_frames = SubResource("SpriteFrames_uqqos")
-animation = &"RifleFire"
+animation = &"Rifle"
 flip_h = true
