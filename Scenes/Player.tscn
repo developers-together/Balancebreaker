@@ -446,16 +446,22 @@ height = 14.0
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_kyqiw")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nn08x")
+animation = &"RX42"
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_nn08x")
-animation = &"VX09"
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_52ee3")
+
+[node name="RX42" type="Node2D" parent="."]
+script = ExtResource("11_ksbbd")
+
+[node name="VX09" type="Node2D" parent="."]
+script = ExtResource("12_glx4g")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(8, 0)
@@ -463,9 +469,3 @@ position = Vector2(8, 0)
 [node name="WeaponSocket" parent="Marker2D" instance=ExtResource("4_dewec")]
 z_index = 10
 position = Vector2(14, 1)
-
-[node name="RX42" type="Node" parent="."]
-script = ExtResource("11_ksbbd")
-
-[node name="VX09" type="Node" parent="."]
-script = ExtResource("12_glx4g")

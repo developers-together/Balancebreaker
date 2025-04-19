@@ -1,8 +1,9 @@
 extends Node2D
 
-
 func _on_rx_42_pressed() -> void:
+	
 	GameData.Player='RX42'
+	
 	get_tree().change_scene_to_file("res://Game.tscn")
 
 

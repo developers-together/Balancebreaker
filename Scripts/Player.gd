@@ -8,8 +8,10 @@ extends CharacterBody2D
 
 @export var radius: float = 10  # Distance from player to weapon
 
-@onready var rx_42: Node = $RX42
-@onready var vx_09: Node = $VX09
+
+#@onready var rx_42: Node = $RX42
+#@onready var vx_09: Node = $VX09
+
 
 const OFFSET = 16
 
@@ -40,12 +42,10 @@ func GetInput():
 		weapon_socket.position.x = OFFSET - 10
 
 func _ready() -> void:
+	pass
+
 	
-	if GameData.Player=="RX42":
-		rx_42.Ready()
-		
-	elif GameData.Player=="VX09":
-		vx_09.Ready()
+	
 	
 func _physics_process(_delta):
 	
@@ -76,9 +76,13 @@ func _process(_delta: float) -> void:
 	weapon_socket.look_at(mouse_pos)
 	weapon_socket.rotation = mouseDirection.angle()
 	weapon_socket.position = weapon_pos
-	if Input.is_action_pressed("fire"):
-		weapon_socket.ranged.fire()
-	
+
+	if Input.is_action_just_pressed("ranged"):
+		weapon_socket.ChangeWeapon(0)
+	if Input.is_action_just_pressed("melee"):
+		weapon_socket.ChangeWeapon(1)
+	if Input.is_action_just_pressed("consumable"):
+		weapon_socket.ChangeWeapon(2)
 	#if Input.is_action_just_pressed("fire"):
 		#var bullet_instance = Bullet.instantiate()
 		#bullet_instance.global_position = weapon_socket.global_position

@@ -1,10 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bb1vpuwn4xjc1"]
+[gd_scene load_steps=2 format=3 uid="uid://bb1vpuwn4xjc1"]
 
 [ext_resource type="Script" uid="uid://voq3bkbg2x72" path="res://Scripts/WeaponSocket.gd" id="1_ke2wp"]
-[ext_resource type="Script" uid="uid://btpppn6lyv68" path="res://Scripts/Ranged.gd" id="2_fllus"]
 
 [node name="WeaponSocket" type="Node2D"]
 script = ExtResource("1_ke2wp")
-
-[node name="Ranged" type="Node" parent="."]
-script = ExtResource("2_fllus")

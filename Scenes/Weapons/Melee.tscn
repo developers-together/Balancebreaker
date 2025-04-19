@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cc8eh28ljuv6e"]
+[gd_scene load_steps=9 format=3 uid="uid://cc8eh28ljuv6e"]
 
+[ext_resource type="Script" uid="uid://cahnmvhtpnxo2" path="res://Scripts/Melee.gd" id="1_5cf4i"]
 [ext_resource type="Texture2D" uid="uid://hmgc3xp0acgp" path="res://Assets/lightsaber_blue_normal-32.png" id="1_nn8kx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5cf4i"]
@@ -17,7 +18,57 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Melee" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nn8kx"]
+size = Vector2(18.998, 6.01388)
+
+[sub_resource type="Animation" id="Animation_5cf4i"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 3.14159]
+}
+
+[sub_resource type="Animation" id="Animation_p3kd4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a8q2o"]
+_data = {
+&"RESET": SubResource("Animation_p3kd4"),
+&"new_animation": SubResource("Animation_5cf4i")
+}
+
+[node name="Melee" type="Area2D"]
+script = ExtResource("1_5cf4i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_p3kd4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.0580288, -6.50084)
+rotation = -1.58531
+shape = SubResource("RectangleShape2D_nn8kx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_a8q2o")
+}

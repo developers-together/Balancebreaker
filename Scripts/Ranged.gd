@@ -1,17 +1,20 @@
 extends Node
 
-var Cooldown :float = 0.5
+#WeaponScenes.Cooldown = 0.5
 
-var LastShot :float 
+func _ready() -> void:
+	WeaponScenes.Cooldown = 0.5
+	WeaponScenes.LastShot = 0.5
+	
 
 var Bullet = preload('res://Scenes/Fire/Bullets.tscn')
 
 func fire():
 	
 
-	if LastShot < Cooldown: return
+	if WeaponScenes.LastShot < WeaponScenes.Cooldown: return
 	
-	LastShot = 0
+	WeaponScenes.LastShot = 0
 	var global_position = get_parent().global_position
 	var MousePosition = get_parent().get_global_mouse_position()
 	var bullet_instance = Bullet.instantiate()
@@ -31,4 +34,5 @@ func fire():
 
 func _physics_process(delta: float) -> void:
 	
-	LastShot += delta 
+	if Input.is_action_pressed("fire"):
+		fire()
