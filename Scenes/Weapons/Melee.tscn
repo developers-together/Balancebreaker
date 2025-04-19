@@ -1,9 +1,29 @@
 [gd_scene load_steps=13 format=3 uid="uid://cc8eh28ljuv6e"]
 
-[ext_resource type="Script" uid="uid://cdnyj3eouwjv8" path="res://Scripts/Melee.gd" id="1_5cf4i"]
 [ext_resource type="Texture2D" uid="uid://miidu23nyrfl" path="res://Assets/Weapons/Lightsaber/ultimate/lightsaber_blue_ult-32.png" id="2_5cf4i"]
 [ext_resource type="Texture2D" uid="uid://hp7fdl7f7f2i" path="res://Assets/Weapons/Sword/sword-32.png" id="3_a8q2o"]
 [ext_resource type="Texture2D" uid="uid://b6isiba3pkkj7" path="res://Assets/Weapons/Lightsaber/normal/lightsaber_red_normal-32.png" id="4_e3q5h"]
+
+[sub_resource type="GDScript" id="GDScript_p3kd4"]
+script/source = "extends Area2D
+
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
+func _ready() -> void:
+	WeaponScenes.Cooldown = 1
+	WeaponScenes.LastShot = 1
+
+func Attack():
+	if WeaponScenes.LastShot > WeaponScenes.Cooldown:
+		WeaponScenes.LastShot = 0
+		animation_player.play(\"new_animation\")
+		
+		
+
+func _process(delta: float) -> void:
+	if Input.is_action_pressed(\"fire\"):
+		Attack()
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p3kd4"]
 atlas = ExtResource("2_5cf4i")
@@ -84,7 +104,7 @@ _data = {
 }
 
 [node name="Melee" type="Area2D"]
-script = ExtResource("1_5cf4i")
+script = SubResource("GDScript_p3kd4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_p3kd4")

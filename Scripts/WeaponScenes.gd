@@ -11,8 +11,12 @@ var Cooldown:float = 0.5
 
 var LastShot :float 
 
+var MeleeCooldown:float = 0.5
+
+var MeleeLastShot :float 
+
 func _physics_process(delta):
-	
+	MeleeLastShot += delta
 	LastShot += delta 
 	for t in Projectiles:
 		var p = t["projectile"]
