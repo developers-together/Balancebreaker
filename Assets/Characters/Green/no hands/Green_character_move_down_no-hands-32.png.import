@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d18petmvtwdt5"
-path="res://.godot/imported/Blue_character_special_no-hands-32.png-8e1d53179324d5023e0c24b8d5411a19.ctex"
+uid="uid://d2b8bagdr3ruc"
+path="res://.godot/imported/Green_character_move_down_no-hands-32.png-dc5906dcfa7193eb5924a741d1536f68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Blue/no hands/Blue_character_special_no-hands-32.png"
-dest_files=["res://.godot/imported/Blue_character_special_no-hands-32.png-8e1d53179324d5023e0c24b8d5411a19.ctex"]
+source_file="res://Assets/Characters/Green/no hands/Green_character_move_down_no-hands-32.png"
+dest_files=["res://.godot/imported/Green_character_move_down_no-hands-32.png-dc5906dcfa7193eb5924a741d1536f68.ctex"]
 
 [params]
 
