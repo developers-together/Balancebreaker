@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://470vvaoyq7o6"]
 
 [ext_resource type="PackedScene" uid="uid://cn8c1tbsrew1" path="res://Scenes/Weapons/Ranged.tscn" id="1_wejd2"]
-[ext_resource type="Script" uid="uid://cit6p4h4dfk6t" path="res://Scripts/Weapons/BallisticShotgun.gd" id="2_d7l01"]
+[ext_resource type="Script" path="res://Scripts/Weapons/BallisticShotgun.gd" id="2_d7l01"]
 
 [node name="BallisticShotgun" instance=ExtResource("1_wejd2")]
 script = ExtResource("2_d7l01")
