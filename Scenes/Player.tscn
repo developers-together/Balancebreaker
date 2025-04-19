@@ -1,4 +1,4 @@
-[gd_scene load_steps=220 format=3 uid="uid://dcabsg7cu7ajn"]
+[gd_scene load_steps=222 format=3 uid="uid://dcabsg7cu7ajn"]
 
 [ext_resource type="Script" uid="uid://doasnjtfwnd56" path="res://Scripts/Player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://dw5gx58oibyhs" path="res://Assets/Characters/Green/no hands/Green_character_idle_no-hands-32.png" id="2_arntx"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://c1qryjrb42fef" path="res://Assets/Characters/Blue/no hands/Blue_character_move_up_no-hands-32.png" id="8_1e7my"]
 [ext_resource type="Texture2D" uid="uid://cvyx64frdy5go" path="res://Assets/Characters/Green/no hands/Green_character_special_no-hands-32.png" id="8_x63xi"]
 [ext_resource type="Texture2D" uid="uid://d18petmvtwdt5" path="res://Assets/Characters/Blue/no hands/Blue_character_special_no-hands-32.png" id="9_arntx"]
+[ext_resource type="Script" uid="uid://btcin0ffo6drt" path="res://Scripts/VX09.gd" id="16_ulo2v"]
+[ext_resource type="Script" uid="uid://bovw1h8jouvd" path="res://Scripts/RX42.gd" id="17_1iu4k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rmrb7"]
 atlas = ExtResource("2_arntx")
@@ -1027,8 +1029,9 @@ animations = [{
 }],
 "loop": true,
 "name": &"RX42MoveDown",
-"speed": 10.0
+"speed": 15.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pf86x")
 }, {
@@ -1043,7 +1046,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"RX42MoveRight",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1060,7 +1063,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"RX42MoveUp",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1361,7 +1364,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"VX09MoveDown",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1378,7 +1381,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"VX09MoveRight",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1395,7 +1398,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"VX09MoveUp",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1503,27 +1506,22 @@ height = 18.0
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_kyqiw")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_nn08x")
-animation = &"RX42"
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_nn08x")
-animation = &"VX09MoveUp"
-frame_progress = 0.797047
+animation = &"RX42Death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_52ee3")
 
-[node name="RX42" type="Node2D" parent="."]
-script = ExtResource("11_ksbbd")
-
 [node name="VX09" type="Node2D" parent="."]
-script = ExtResource("12_glx4g")
+script = ExtResource("16_ulo2v")
+
+[node name="RX42" type="Node2D" parent="."]
+script = ExtResource("17_1iu4k")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(8, 0)
