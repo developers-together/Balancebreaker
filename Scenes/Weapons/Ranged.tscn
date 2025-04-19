@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://cn8c1tbsrew1"]
 
 [ext_resource type="Texture2D" uid="uid://bd80bu7bsml4n" path="res://Placeholders/placeholder8.png" id="1_r5403"]
-[ext_resource type="Script" uid="uid://btpppn6lyv68" path="res://Scripts/Ranged.gd" id="2_ehj5m"]
+[ext_resource type="Script" uid="uid://btpppn6lyv68" path="res://Scripts/Weapons/Ranged.gd" id="2_ehj5m"]
 
 [sub_resource type="GDScript" id="GDScript_m5ws0"]
 script/source = "extends Node2D
