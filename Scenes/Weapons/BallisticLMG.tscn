@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bccd7ga8hv3j8"]
+
+[ext_resource type="PackedScene" uid="uid://cn8c1tbsrew1" path="res://Scenes/Weapons/Ranged.tscn" id="1_1kqqh"]
+
+[node name="BallisticLMG" instance=ExtResource("1_1kqqh")]
