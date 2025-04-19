@@ -3,3 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://cn8c1tbsrew1" path="res://Scenes/Weapons/Ranged.tscn" id="1_y5qwj"]
 
 [node name="BallisticRocketLauncher" instance=ExtResource("1_y5qwj")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+animation = &"BlueLaser"
