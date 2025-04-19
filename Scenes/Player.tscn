@@ -1528,4 +1528,3 @@ position = Vector2(8, 0)
 
 [node name="WeaponSocket" parent="Marker2D" instance=ExtResource("4_dewec")]
 z_index = 10
-position = Vector2(14, 1)
