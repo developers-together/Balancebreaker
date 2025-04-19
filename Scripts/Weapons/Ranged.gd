@@ -14,9 +14,6 @@ func _ready() -> void:
 	WeaponScenes.Cooldown = 0.5
 	WeaponScenes.LastShot = 0.5
 
-	# 👇 Connect to animation finished if we have AnimatedSprite2D
-	$AnimatedSprite2D.connect("animation_finished", Callable(self, "_on_animation_finished"))
-
 func fire(speed = 600, addeddirection = 0) -> void:
 	WeaponScenes.LastShot = 0
 
@@ -54,11 +51,6 @@ func fire(speed = 600, addeddirection = 0) -> void:
 		player_ref.is_thinking = false
 		
 	print("fired")
-
-
-func _on_animation_finished():
-	var sprite = $AnimatedSprite2D
-	sprite.play(weapon_name)
 
 
 func _physics_process(delta: float) -> void:
