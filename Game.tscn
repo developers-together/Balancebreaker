@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://d3ffqgx2d2run"]
+[gd_scene load_steps=7 format=4 uid="uid://d3ffqgx2d2run"]
 
 [ext_resource type="Script" uid="uid://cugbwvs4stbog" path="res://GameManager.gd" id="1_u44n3"]
 [ext_resource type="Texture2D" uid="uid://d22v12q4g7gjb" path="res://Placeholders/GRASS+.png" id="1_xkndl"]
 [ext_resource type="PackedScene" uid="uid://dcabsg7cu7ajn" path="res://Scenes/Player.tscn" id="3_u44n3"]
+[ext_resource type="PackedScene" uid="uid://bk85fueu47cpj" path="res://Scenes/Enemies/Enemy.tscn" id="4_sb48q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkndl"]
 texture = ExtResource("1_xkndl")
@@ -367,3 +368,6 @@ tile_map_data = PackedByteArray("AAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAA
 tile_set = SubResource("TileSet_u44n3")
 
 [node name="Player" parent="." instance=ExtResource("3_u44n3")]
+
+[node name="Enemy" parent="." instance=ExtResource("4_sb48q")]
+position = Vector2(125, -88)

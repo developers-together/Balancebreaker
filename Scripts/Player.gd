@@ -67,12 +67,25 @@ func _physics_process(_delta):
 
 func _process(_delta: float) -> void:
 	var mouse_pos = get_global_mouse_position()
-	var mouseDirection = (mouse_pos - global_position).normalized()
-	var weapon_pos = mouseDirection * radius
-	weapon_socket.look_at(mouse_pos)
-	weapon_socket.rotation = mouseDirection.angle()
-	weapon_socket.position = weapon_pos
+	var mouse_direction = (mouse_pos - global_position).normalized()
 
+	weapon_socket.look_at(mouse_pos)
+	weapon_socket.rotation = mouse_direction.angle()
+
+	# Flip weapon sprite
+	if weapon_socket.get_child_count() > 0:
+		var current_weapon = weapon_socket.get_child(0)
+		if current_weapon is Node2D:
+			current_weapon.scale.y = -1 if mouse_pos.x < global_position.x else 1
+
+	# Keep weapon positioned on the correct side of the player
+	var x_offset = 15
+	var y_offset = 0
+	if mouse_pos.x < global_position.x:
+		x_offset *= -1
+	weapon_socket.position = Vector2(x_offset, y_offset)
+
+	# Weapon switching
 	if Input.is_action_just_pressed("ranged"):
 		weapon_socket.ChangeWeapon(0)
 	if Input.is_action_just_pressed("melee"):

@@ -1,8 +1,8 @@
 extends Node2D
 
-
 func _ready() -> void:
 	var weapon = WeaponScenes.PlayerInv[0].instantiate()
+	weapon.player_ref = get_parent().get_parent() 
 	add_child(weapon)
 
 

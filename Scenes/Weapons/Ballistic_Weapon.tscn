@@ -1,14 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://buor6dqltb83p"]
+[gd_scene load_steps=2 format=3 uid="uid://buor6dqltb83p"]
 
 [ext_resource type="PackedScene" uid="uid://cn8c1tbsrew1" path="res://Scenes/Weapons/Ranged.tscn" id="1_wcran"]
-[ext_resource type="Script" uid="uid://d26uchf2p1e8m" path="res://Scripts/Ranged.gd" id="2_uhyp3"]
 
 [node name="BallisticWeapon" instance=ExtResource("1_wcran")]
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 animation = &"Sniper"
-frame = 0
-frame_progress = 0.0
-
-[node name="Ranged" parent="." index="1"]
-script = ExtResource("2_uhyp3")
