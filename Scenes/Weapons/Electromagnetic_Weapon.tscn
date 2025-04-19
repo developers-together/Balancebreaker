@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwdw4cc25gltu"]
+
+[ext_resource type="PackedScene" uid="uid://cn8c1tbsrew1" path="res://Scenes/Weapons/Ranged.tscn" id="1_k2g00"]
+[ext_resource type="Script" uid="uid://d26uchf2p1e8m" path="res://Scripts/Ranged.gd" id="2_y6prh"]
+
+[node name="ElectromagneticWeapon" instance=ExtResource("1_k2g00")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+animation = &"BlueLaser"
+frame = 0
+frame_progress = 0.38305
+
+[node name="Ranged" parent="." index="1"]
+script = ExtResource("2_y6prh")

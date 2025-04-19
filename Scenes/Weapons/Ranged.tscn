@@ -559,5 +559,5 @@ script = ExtResource("2_ehj5m")
 position = Vector2(8, 0)
 scale = Vector2(0.615814, 0.615814)
 sprite_frames = SubResource("SpriteFrames_uqqos")
-animation = &"Sniper"
+animation = &"RifleFire"
 flip_h = true
