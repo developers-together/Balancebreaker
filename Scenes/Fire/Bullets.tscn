@@ -1,8 +1,8 @@
 [gd_scene load_steps=26 format=3 uid="uid://bxc40d5yytxk3"]
 
 [ext_resource type="Script" uid="uid://mgbunug0w6av" path="res://Scripts/Bullets.gd" id="1_rayda"]
-[ext_resource type="Texture2D" uid="uid://bk7hiedqisq2b" path="res://Assets/bullet-32.png" id="2_rayda"]
-[ext_resource type="Texture2D" uid="uid://cv5orm07ulbo3" path="res://Assets/laser/laser_bullet-32.png" id="3_nriir"]
+[ext_resource type="Texture2D" uid="uid://bk7hiedqisq2b" path="res://Assets/Weapons/Pistol/classic/bullet-32.png" id="2_rayda"]
+[ext_resource type="Texture2D" uid="uid://dhvco8cd45jw3" path="res://Assets/Weapons/Pistol/laser/blue/laser_bullet_blue-32.png" id="3_d50c0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nriir"]
 atlas = ExtResource("2_rayda")
@@ -64,24 +64,24 @@ region = Rect2(416, 0, 32, 32)
 atlas = ExtResource("2_rayda")
 region = Rect2(448, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_slrs8"]
-atlas = ExtResource("3_nriir")
+[sub_resource type="AtlasTexture" id="AtlasTexture_158du"]
+atlas = ExtResource("3_d50c0")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hb7gj"]
-atlas = ExtResource("3_nriir")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1c3dt"]
+atlas = ExtResource("3_d50c0")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2acy0"]
-atlas = ExtResource("3_nriir")
+[sub_resource type="AtlasTexture" id="AtlasTexture_owvg7"]
+atlas = ExtResource("3_d50c0")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8twe6"]
-atlas = ExtResource("3_nriir")
+[sub_resource type="AtlasTexture" id="AtlasTexture_me15r"]
+atlas = ExtResource("3_d50c0")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gk5xr"]
-atlas = ExtResource("3_nriir")
+[sub_resource type="AtlasTexture" id="AtlasTexture_vf7h4"]
+atlas = ExtResource("3_d50c0")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h3wt2"]
@@ -138,19 +138,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_slrs8")
+"texture": SubResource("AtlasTexture_158du")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hb7gj")
+"texture": SubResource("AtlasTexture_1c3dt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2acy0")
+"texture": SubResource("AtlasTexture_owvg7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8twe6")
+"texture": SubResource("AtlasTexture_me15r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gk5xr")
+"texture": SubResource("AtlasTexture_vf7h4")
 }],
 "loop": true,
 "name": &"laser bullet",
@@ -158,7 +158,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_biy0t"]
-size = Vector2(7, 3)
+size = Vector2(7.5, 3)
 
 [node name="Bullets" type="Area2D"]
 script = ExtResource("1_rayda")
@@ -168,8 +168,8 @@ position = Vector2(2, 0)
 scale = Vector2(0.576923, 0.47619)
 sprite_frames = SubResource("SpriteFrames_h3wt2")
 animation = &"laser bullet"
-frame_progress = 0.676918
+frame_progress = 0.375602
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -1)
+position = Vector2(-1.25, -1)
 shape = SubResource("RectangleShape2D_biy0t")

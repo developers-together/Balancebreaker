@@ -1,25 +1,51 @@
-[gd_scene load_steps=9 format=3 uid="uid://cc8eh28ljuv6e"]
+[gd_scene load_steps=13 format=3 uid="uid://cc8eh28ljuv6e"]
 
-[ext_resource type="Script" uid="uid://cahnmvhtpnxo2" path="res://Scripts/Weapons/Melee.gd" id="1_5cf4i"]
-[ext_resource type="Texture2D" uid="uid://hmgc3xp0acgp" path="res://Assets/lightsaber_blue_normal-32.png" id="1_nn8kx"]
+[ext_resource type="Script" uid="uid://cdnyj3eouwjv8" path="res://Scripts/Melee.gd" id="1_5cf4i"]
+[ext_resource type="Texture2D" uid="uid://miidu23nyrfl" path="res://Assets/Weapons/Lightsaber/ultimate/lightsaber_blue_ult-32.png" id="2_5cf4i"]
+[ext_resource type="Texture2D" uid="uid://hp7fdl7f7f2i" path="res://Assets/Weapons/Sword/sword-32.png" id="3_a8q2o"]
+[ext_resource type="Texture2D" uid="uid://b6isiba3pkkj7" path="res://Assets/Weapons/Lightsaber/normal/lightsaber_red_normal-32.png" id="4_e3q5h"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5cf4i"]
-atlas = ExtResource("1_nn8kx")
-region = Rect2(352, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3kd4"]
+atlas = ExtResource("2_5cf4i")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22qrq"]
+atlas = ExtResource("3_a8q2o")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iy0gs"]
+atlas = ExtResource("4_e3q5h")
+region = Rect2(384, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p3kd4"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5cf4i")
+"texture": SubResource("AtlasTexture_p3kd4")
 }],
 "loop": true,
 "name": &"default",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22qrq")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iy0gs")
+}],
+"loop": true,
+"name": &"new_animation_1",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nn8kx"]
-size = Vector2(18.998, 6.01388)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvmdf"]
+size = Vector2(19.1061, 6.00663)
 
 [sub_resource type="Animation" id="Animation_p3kd4"]
 length = 0.001
@@ -64,9 +90,9 @@ script = ExtResource("1_5cf4i")
 sprite_frames = SubResource("SpriteFrames_p3kd4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.0580288, -6.50084)
+position = Vector2(0.0754015, -6)
 rotation = -1.58531
-shape = SubResource("RectangleShape2D_nn8kx")
+shape = SubResource("RectangleShape2D_rvmdf")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

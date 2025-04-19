@@ -59,7 +59,10 @@ func GetInput(delta):
 		weapon_socket.position.x = OFFSET - 10
 
 func _ready() -> void:
-	pass
+	if GameData.Player=="RX42":
+		player_id = "RX42"
+	elif GameData.Player=="VX09":
+		player_id = "VX09"
 
 	
 	
