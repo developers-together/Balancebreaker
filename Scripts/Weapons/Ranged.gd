@@ -14,16 +14,15 @@ func _ready() -> void:
 	WeaponScenes.Cooldown = 0.5
 	WeaponScenes.LastShot = 0.5
 
-func fire(speed = 600, addeddirection = 0) -> void:
+func fire(speed = 600, addeddirection = 0, target_position = get_parent().get_global_mouse_position()) -> void:
 	WeaponScenes.LastShot = 0
 
 	var global_position = get_parent().global_position
-	var mouse_position = get_parent().get_global_mouse_position()
-
+	
 	var bullet_instance = Bullet.instantiate()
 	bullet_instance.global_position = global_position
 
-	var direction = (mouse_position - global_position).normalized().rotated(addeddirection)
+	var direction = (target_position - global_position).normalized().rotated(addeddirection)
 	bullet_instance.velocity = direction * speed
 	bullet_instance.rotation = direction.angle()
 
@@ -39,12 +38,10 @@ func fire(speed = 600, addeddirection = 0) -> void:
 	var fire_anim = weapon_name + "Fire"
 	var idle_anim = weapon_name 
 
-	# Play fire animation
 	sprite.play(fire_anim)
-	# Wait for the duration of the fire animation using a timer
 	var anim_length = sprite.sprite_frames.get_frame_count(fire_anim) / sprite.speed_scale
 	await get_tree().create_timer(0.15).timeout
-	sprite.play(weapon_name)
+	sprite.play(idle_anim)
 	
 	if player_ref:
 		player_ref.idle_time = 0.0
