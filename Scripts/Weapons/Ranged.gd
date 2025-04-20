@@ -17,16 +17,15 @@ func _ready() -> void:
 		weapon_name = scene_file_path.get_file().get_basename()
 
 
-func fire(speed = 600, addeddirection = 0) -> void:
+func fire(speed = 600, addeddirection = 0, target_position = get_parent().get_global_mouse_position()) -> void:
 	WeaponScenes.LastShot = 0
 
 	var global_position = get_parent().global_position
-	var mouse_position = get_parent().get_global_mouse_position()
-
+	
 	var bullet_instance = Bullet.instantiate()
 	bullet_instance.global_position = global_position
 
-	var direction = (mouse_position - global_position).normalized().rotated(addeddirection)
+	var direction = (target_position - global_position).normalized().rotated(addeddirection)
 	bullet_instance.velocity = direction * speed
 	bullet_instance.rotation = direction.angle()
 
@@ -41,11 +40,12 @@ func fire(speed = 600, addeddirection = 0) -> void:
 	var sprite = $AnimatedSprite2D
 	var fire_anim = weapon_name + "Fire"
 
-	# Play fire animation
-	sprite.play(fire_anim)
+
 	# Wait for the duration of the fire animation using a timer
+	sprite.play(fire_anim)
 	await get_tree().create_timer(0.15).timeout
 	sprite.play(weapon_name)
+
 	if player_ref:
 		player_ref.idle_time = 0.0
 		player_ref.is_thinking = false

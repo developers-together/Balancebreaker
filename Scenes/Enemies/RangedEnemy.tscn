@@ -21,7 +21,7 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ucmt6"]
 radius = 8.0
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="RangedEnemy" type="CharacterBody2D"]
 script = ExtResource("1_8o0hk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -31,3 +31,5 @@ sprite_frames = SubResource("SpriteFrames_7kucs")
 top_level = true
 shape = SubResource("CapsuleShape2D_ucmt6")
 debug_color = Color(0.96967, 0.121591, 0.321881, 0.42)
+
+[node name="Marker2D" type="Marker2D" parent="."]
