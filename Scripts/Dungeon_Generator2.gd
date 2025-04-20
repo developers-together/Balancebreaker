@@ -33,7 +33,7 @@ class Room:
 		self.height = height
 		self.x = gridX * (width + 2)
 		self.y = gridY * (height + 2)
-
+		
 func _ready():
 	randomize()
 	_generate_layout()

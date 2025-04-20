@@ -730,7 +730,7 @@ roomHeight = 35
 tile_set = SubResource("TileSet_uimrv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.55, 1.55)
+zoom = Vector2(1.4, 1.4)
 limit_smoothed = true
 position_smoothing_enabled = true
 
