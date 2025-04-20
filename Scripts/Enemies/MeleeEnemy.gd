@@ -54,7 +54,7 @@ func _physics_process(delta):
 		final_direction = final_direction.normalized()
 
 		# Move if not too close
-		if distance > 20:
+		if distance > 25:
 			velocity = final_direction * speed
 		else:
 			velocity = Vector2.ZERO
