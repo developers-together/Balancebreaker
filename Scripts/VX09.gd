@@ -8,8 +8,8 @@ func _ready():
 	
 	print("VX-09 says hi")
 	
-	WeaponScenes.PlayerInv[0]= preload("res://Scenes/Weapons/Ranged.tscn")
+	WeaponScenes.PlayerInv[0]= preload("res://Scenes/Weapons/EMPistol.tscn")
 	WeaponScenes.PlayerInv[1]= preload("res://Scenes/Weapons/Melee.tscn")
 	
-	WeaponScenes.PlayerDefaultInv[0]= preload("res://Scenes/Weapons/Ranged.tscn")
+	WeaponScenes.PlayerDefaultInv[0]= preload("res://Scenes/Weapons/EMPistol.tscn")
 	WeaponScenes.PlayerDefaultInv[1]= preload("res://Scenes/Weapons/Melee.tscn")

@@ -22,18 +22,6 @@ func _ready() -> void:
 	marker_2d.add_child(WeaponInstance)
 	#PlayerDirection = player.global_position
 
-#func _physics_process(delta):
-	#if Player:
-		#PlayerDirection = Player.global_position
-		#var direction = (Player.global_position - global_position).normalized()
-		#LastShot += delta
-		#velocity = direction * speed
-		#PlayerDirection = Player.position - position
-		#marker_2d.rotation = PlayerDirection.angle()
-		#if LastShot > CoolDown:
-			#WeaponInstance.Attack()
-			#LastShot = 0
-		#move_and_slide()
 		
 func _physics_process(delta):
 	if Player:

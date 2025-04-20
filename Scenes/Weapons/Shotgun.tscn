@@ -6,6 +6,7 @@
 [node name="BallisticShotgun" instance=ExtResource("1_4xjk2")]
 script = ExtResource("2_bic6o")
 BulletSpacing = 10
+NumberOfBullets = 3
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 position = Vector2(0, 0)

@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cn8c1tbsrew1" path="res://Scenes/Weapons/Ranged.tscn" id="1_0y8u1"]
 
 [node name="EMPistol" instance=ExtResource("1_0y8u1")]
+EM = true
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 animation = &"BlueLaser"
