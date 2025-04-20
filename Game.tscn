@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://d3ffqgx2d2run"]
+[gd_scene load_steps=8 format=4 uid="uid://d3ffqgx2d2run"]
 
 [ext_resource type="Script" uid="uid://cugbwvs4stbog" path="res://GameManager.gd" id="1_u44n3"]
 [ext_resource type="Texture2D" uid="uid://d22v12q4g7gjb" path="res://Placeholders/GRASS+.png" id="1_xkndl"]
 [ext_resource type="PackedScene" uid="uid://cn674sgp2uh5x" path="res://Scenes/Enemies/MeleeEnemy.tscn" id="3_sb48q"]
 [ext_resource type="PackedScene" uid="uid://dcabsg7cu7ajn" path="res://Scenes/Player.tscn" id="3_u44n3"]
+[ext_resource type="PackedScene" uid="uid://bk85fueu47cpj" path="res://Scenes/Enemies/RangedEnemy.tscn" id="5_t88pq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkndl"]
 texture = ExtResource("1_xkndl")
@@ -368,5 +369,9 @@ tile_map_data = PackedByteArray("AAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAA
 tile_set = SubResource("TileSet_u44n3")
 
 [node name="MeleeEnemy" parent="." instance=ExtResource("3_sb48q")]
+position = Vector2(280, 22)
 
 [node name="Player" parent="." instance=ExtResource("3_u44n3")]
+
+[node name="RangedEnemy" parent="." instance=ExtResource("5_t88pq")]
+position = Vector2(220, -48)
