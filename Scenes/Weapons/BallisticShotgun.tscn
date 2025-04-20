@@ -10,6 +10,4 @@ BulletSpacing = 10
 [node name="AnimatedSprite2D" parent="." index="0"]
 position = Vector2(0, 0)
 scale = Vector2(0.921875, 0.921875)
-animation = &"ShotgunFire"
-frame = 1
-frame_progress = 0.122603
+animation = &"Shotgun"

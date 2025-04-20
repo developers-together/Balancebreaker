@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var weapon_name: String = "Rifle" 
+@export var weapon_name: String 
 @export var Damage = 10
 @export var FireRate = 0.1
 @export var EM: bool
@@ -13,6 +13,9 @@ var Bullet = preload("res://Scenes/Fire/Bullets.tscn")
 func _ready() -> void:
 	WeaponScenes.Cooldown = 0.5
 	WeaponScenes.LastShot = 0.5
+	if weapon_name.is_empty():
+		weapon_name = scene_file_path.get_file().get_basename()
+
 
 func fire(speed = 600, addeddirection = 0) -> void:
 	WeaponScenes.LastShot = 0
@@ -37,19 +40,16 @@ func fire(speed = 600, addeddirection = 0) -> void:
 
 	var sprite = $AnimatedSprite2D
 	var fire_anim = weapon_name + "Fire"
-	var idle_anim = weapon_name 
 
 	# Play fire animation
 	sprite.play(fire_anim)
 	# Wait for the duration of the fire animation using a timer
-	var anim_length = sprite.sprite_frames.get_frame_count(fire_anim) / sprite.speed_scale
 	await get_tree().create_timer(0.15).timeout
 	sprite.play(weapon_name)
-	
 	if player_ref:
 		player_ref.idle_time = 0.0
 		player_ref.is_thinking = false
-		
+		player_ref.is_fire = true
 	print("fired")
 
 

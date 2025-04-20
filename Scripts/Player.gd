@@ -15,7 +15,7 @@ const THINK_TRIGGER_TIME := 10.0
 
 #signal shoot(bullet, direction, location)
 var is_thinking := false
-
+var is_fire := false
 var player_id: String = ""
 
 func GetInput(delta):
@@ -35,6 +35,9 @@ func GetInput(delta):
 		elif input_direction.x != 0:
 			animated_sprite_2d.play(player_id+"MoveRight")
 	else:
+		if is_fire:
+			animated_sprite_2d.play(player_id+"Normal")
+			is_fire = false
 		# Player is idle
 		if not is_thinking:
 			idle_time += delta
