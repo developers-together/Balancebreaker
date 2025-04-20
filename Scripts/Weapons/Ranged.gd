@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @export var weapon_name: String 
 @export var Damage = 10
 @export var FireRate = 0.1
@@ -13,9 +14,8 @@ var Bullet = preload("res://Scenes/Fire/Bullets.tscn")
 func _ready() -> void:
 	WeaponScenes.Cooldown = 0.5
 	WeaponScenes.LastShot = 0.5
-	if weapon_name.is_empty():
-		weapon_name = scene_file_path.get_file().get_basename()
-
+	weapon_name = sprite.animation
+	
 
 func fire(speed = 600, addeddirection = 0, target_position = get_parent().get_global_mouse_position()) -> void:
 	WeaponScenes.LastShot = 0
@@ -39,10 +39,10 @@ func fire(speed = 600, addeddirection = 0, target_position = get_parent().get_gl
 
 	var sprite = $AnimatedSprite2D
 	var fire_anim = weapon_name + "Fire"
-
-
-	# Wait for the duration of the fire animation using a timer
+	print(fire_anim)
+	# Play fire animation
 	sprite.play(fire_anim)
+	# Wait for the duration of the fire animation using a timer
 	await get_tree().create_timer(0.15).timeout
 	sprite.play(weapon_name)
 

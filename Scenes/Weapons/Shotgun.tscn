@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://470vvaoyq7o6"]
+
+[ext_resource type="PackedScene" uid="uid://cn8c1tbsrew1" path="res://Scenes/Weapons/Ranged.tscn" id="1_4xjk2"]
+[ext_resource type="Script" uid="uid://cit6p4h4dfk6t" path="res://Scripts/Weapons/BallisticShotgun.gd" id="2_bic6o"]
+
+[node name="BallisticShotgun" instance=ExtResource("1_4xjk2")]
+script = ExtResource("2_bic6o")
+BulletSpacing = 10
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, 0)
+scale = Vector2(0.921875, 0.921875)
+animation = &"Shotgun"
