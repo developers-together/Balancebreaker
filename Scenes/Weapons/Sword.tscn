@@ -6,4 +6,4 @@
 EM = true
 
 [node name="AnimatedSprite2D" parent="." index="0"]
-animation = &"new_animation"
+animation = &"Sword"

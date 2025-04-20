@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bk85fueu47cpj"]
 
-[ext_resource type="Script" uid="uid://c3qlpox4o1d33" path="res://Scripts/Enemies/Enemy.gd" id="1_8o0hk"]
+[ext_resource type="Script" uid="uid://c3qlpox4o1d33" path="res://Scripts/Enemies/RangedEnemy.gd" id="1_8o0hk"]
 [ext_resource type="Texture2D" uid="uid://bji7pcu4thguo" path="res://Assets/Characters/Blue/no hands/Blue_character_move_down_no-hands-32.png" id="1_ucmt6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8o0hk"]

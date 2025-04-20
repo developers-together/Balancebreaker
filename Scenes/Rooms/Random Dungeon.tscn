@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://c6wrcbue1ae6l"]
 
-[ext_resource type="Script" uid="uid://bopofplhag8dd" path="res://Scripts/Dungeon_Generator2.gd" id="1_uimrv"]
+[ext_resource type="Script" path="res://Scripts/Dungeon_Generator2.gd" id="1_uimrv"]
 [ext_resource type="Texture2D" uid="uid://d22v12q4g7gjb" path="res://Placeholders/GRASS+.png" id="2_milnx"]
 [ext_resource type="Texture2D" uid="uid://bk182yui5nd3h" path="res://Placeholders/Tiles/Tilesheet - WOODS.png" id="3_atvjr"]
 [ext_resource type="PackedScene" uid="uid://dcabsg7cu7ajn" path="res://Scenes/Player.tscn" id="4_uimrv"]
@@ -730,7 +730,6 @@ roomHeight = 35
 tile_set = SubResource("TileSet_uimrv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.4, 1.4)
 limit_smoothed = true
 position_smoothing_enabled = true
 
